@@ -7,6 +7,121 @@
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-	<h1>registro</h1>
+	<section class = "login-register">
+		<h1 class="login-register-title"> Log in | Registrarse</h1>
+	<div class= "main-container">
+			<div class="login-register-wrapper-column-login"><div class="login-register-wrapper-login" data-view="Login">
+				<h2 class="login-register-login-title">Clientes Candy Life</h2>
+				<small class="login-register-login-required"> Campos requeridos <span class="login-register-login-form-required">*</span></small>  	
+			<form class = "login-register-form">
+			<fieldset class = "fieldset">
+				<div class = "login-register-form" data-valition="control group" data-valition-error>
+				<label class= "login label" for="login-email"> E-mail
+					<small class = "login campo requerido" >*
+					</small>
+				</label>
+				<div class = "login control" data-valition = "control">
+					<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
+					<P data-valition-error="block">El e-mail es un campo requerido
+					</P>
+				</div>
+			</div>
+			<div class = "login-register-form" data-valition="control group" data-valition-error>
+					<label class= "login label" for="login-pass"> Contraseña
+							<small class = "login campo requerido" >*
+							</small>
+						</label>
+			<div class = "login control" data-valition = "control">
+					<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
+								<P data-valition-error="block"> La contraseña es un campo requerido
+								</P>
+							</div>
+			<div class = "login control" data-type = "form-login-action">
+				<button type = "submit" class ="login-register-login-submit" data-action = "login button" > Log in
+				</button>
+				<a class = "login-register-olvido" data-action="olvido-pass">Olvidaste tu contraseña?
+				</a>	
+			</div>
+						
+			</div>
+
+			</fieldset>
+		</form> 
+		</section>
+
+		<div class = "login-register-form" data-valition="control group" data-valition-error>
+
+				<div class = "login-register-form" data-valition="control group" data-valition-error>
+				
+						<label class= "login label" for="login-pass"> Nombre
+								<small class = "login campo requerido" >*
+								</small>
+							
+						</label>
+					</div>
+					<div class = "login control" data-valition = "control">
+							<input autofocus type = "nombre" type="nombre" id = "register-n" class= "register imput" placeholder="Nombre">
+					</div>
+		
+				<div class = "login-register-form" data-valition="control group" data-valition-error>
+				
+						<label class= "login label" for="login-pass"> Apellido
+								<small class = "login campo requerido" >*
+								</small>
+						</label>
+					</div>
+					<div class = "login control" data-valition = "control">
+							<input autofocus type = "apellido" type="apellido" id = "register-a" class= "register imput" placeholder="Apellido">
+					</div>
+		
+		
+				<div class = "login-register-form" data-valition="control group" data-valition-error>
+				
+						<label class= "login label" for="login-pass"> Domicilio
+						</label>
+					</div>
+					<div class = "login control" data-valition = "control">
+							<input autofocus type = "domicilio" type="domicilio" id = "register-d" class= "register imput" placeholder="Domicilio">
+					</div>
+
+			<label class= "login label" for="login-email"> E-mail
+					<small class = "login campo requerido" >*
+					</small>
+				</label>
+				<div class = "login control" data-valition = "control">
+					<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
+					<P data-valition-error="block">El e-mail es un campo requerido
+					</P>
+				</div>
+
+		</div>
+		
+		<div class = "login-register-form" data-valition="control group" data-valition-error>
+				
+			<label class= "login label" for="login-pass"> Contraseña
+					<small class = "login campo requerido" >*
+					</small>
+				
+			</label>
+		</div>
+		
+			<div class = "login control" data-valition = "control">
+					<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
+								<P data-valition-error="block"> La contraseña es un campo requerido
+								</P>
+							</div>
+			<div class = "login control" data-type = "form-login-action">
+				<button type = "submit" class ="login-register-login-submit" data-action = "register button" > Registrarse!
+				</button>
+			</div>
+						
+			</div>
+
+			</fieldset>
+		</form> 
+		</section>
+	</div>
+				
+	</div>
 </body>
 </html>
