@@ -4,52 +4,61 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home Page</title>
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
 	<section class = "login-register">
 		<h1 class="login-register-title"> Log in | Registrarse</h1>
 	<div class= "main-container">
-			<div class="login-register-wrapper-column-login"><div class="login-register-wrapper-login" data-view="Login">
-				<h2 class="login-register-login-title">Clientes Candy Life</h2>
-				<small class="login-register-login-required"> Campos requeridos <span class="login-register-login-form-required">*</span></small>  	
-			<form class = "login-register-form">
-			<fieldset class = "fieldset">
+
+		<fieldset class = "fieldset">
+				<h2 class="login-register-login-title">Clientes Candy Life</h2>		
+					<small class="login-register-login-required"> Campos requeridos <span class="login-register-login-form-required">*</span></small>  	
+	
 				<div class = "login-register-form" data-valition="control group" data-valition-error>
-				<label class= "login label" for="login-email"> E-mail
-					<small class = "login campo requerido" >*
-					</small>
-				</label>
+					<label class= "login label" for="login-email"> E-mail
+						<small class = "login campo requerido" >*</small>
+					</label>
 				<div class = "login control" data-valition = "control">
 					<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
-					<P data-valition-error="block">El e-mail es un campo requerido
+					<P data-valition-error="block"> <small class = requerido>
+							El E-mail es un campo requerido
+					</small> 
 					</P>
 				</div>
-			</div>
-			<div class = "login-register-form" data-valition="control group" data-valition-error>
+	
+				<div class = "login-register-form" data-valition="control group" data-valition-error>
 					<label class= "login label" for="login-pass"> Contraseña
 							<small class = "login campo requerido" >*
 							</small>
 						</label>
-			<div class = "login control" data-valition = "control">
-					<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
-								<P data-valition-error="block"> La contraseña es un campo requerido
+					<div class = "login control" data-valition = "control">
+						<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
+								<P data-valition-error="block"> 
+									<small class=requerido>
+									La contraseña es un campo requerido
+								</small>
 								</P>
-							</div>
-			<div class = "login control" data-type = "form-login-action">
-				<button type = "submit" class ="login-register-login-submit" data-action = "login button" > Log in
-				</button>
-				<a class = "login-register-olvido" data-action="olvido-pass">Olvidaste tu contraseña?
+					</div>
+
+				<div class = "login control" data-type = "form-login-action">
+					<button type = "submit" class ="login-register-login-submit" data-action = "login button" > Log in
+					</button>
+					<a class = "login-register-olvido" data-action="olvido-pass">Olvidaste tu contraseña?
 				</a>	
 			</div>
-						
-			</div>
+			
 
-			</fieldset>
-		</form> 
-		</section>
+		</fieldset>
 
-		<div class = "login-register-form" data-valition="control group" data-valition-error>
+		<fieldset class = "fieldset">
+		<div class="register"><div class="register" data-view="Registrarse"></div>
+					<h2 class="login-register-login-title">Registrarse!</h2>
+					<small class="login-register-login-required"> Campos requeridos <span class="login-register-login-form-required">*</span></small>  	
+				<form class = "login-register-form">
+				
+		
+				<div class = "login-register-form" data-valition="control group" data-valition-error>
 
 				<div class = "login-register-form" data-valition="control group" data-valition-error>
 				
@@ -60,7 +69,7 @@
 						</label>
 					</div>
 					<div class = "login control" data-valition = "control">
-							<input autofocus type = "nombre" type="nombre" id = "register-n" class= "register imput" placeholder="Nombre">
+							<input autofocus type = "nombre" type="nombre" id = "register-n" class= "register imput" >
 					</div>
 		
 				<div class = "login-register-form" data-valition="control group" data-valition-error>
@@ -71,7 +80,7 @@
 						</label>
 					</div>
 					<div class = "login control" data-valition = "control">
-							<input autofocus type = "apellido" type="apellido" id = "register-a" class= "register imput" placeholder="Apellido">
+							<input autofocus type = "apellido" type="apellido" id = "register-a" class= "register imput" >
 					</div>
 		
 		
@@ -81,7 +90,7 @@
 						</label>
 					</div>
 					<div class = "login control" data-valition = "control">
-							<input autofocus type = "domicilio" type="domicilio" id = "register-d" class= "register imput" placeholder="Domicilio">
+							<input autofocus type = "domicilio" type="domicilio" id = "register-d" class= "register imput" >
 					</div>
 
 			<label class= "login label" for="login-email"> E-mail
@@ -90,10 +99,7 @@
 				</label>
 				<div class = "login control" data-valition = "control">
 					<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
-					<P data-valition-error="block">El e-mail es un campo requerido
-					</P>
-				</div>
-
+				
 		</div>
 		
 		<div class = "login-register-form" data-valition="control group" data-valition-error>
@@ -107,21 +113,34 @@
 		
 			<div class = "login control" data-valition = "control">
 					<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
-								<P data-valition-error="block"> La contraseña es un campo requerido
-								</P>
-							</div>
+
+					</div>
+			<div class = "login-register-form" data-valition="control group" data-valition-error>
+				
+					<label class= "login label" for="login-pass"> Confirmar contraseña
+							<small class = "login campo requerido" >*
+								</small>
+					
+					</label>
+				</div>
+						
+			<div class = "login control" data-valition = "control">
+				<input autofocus type = "password" type="password" id = "login-pass" class= "login imput">
+				
+				</div>
+						
 			<div class = "login control" data-type = "form-login-action">
-				<button type = "submit" class ="login-register-login-submit" data-action = "register button" > Registrarse!
+				<button type = "submit" class ="login-register-login-submit" data-action = "register button" > Crear cuenta
 				</button>
 			</div>
 						
-			</div>
-
-			</fieldset>
-		</form> 
-		</section>
-	</div>
+			
 				
 	</div>
+				
+
+
+</fieldset>
+</div>
 </body>
 </html>
