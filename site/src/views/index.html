@@ -4,9 +4,186 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home Page</title>
-	<link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
-	<h1>Home Page</h1>
+	<header>
+			<div id="logo"> <img src="/images/logo.png" /></div>
+			<ul id="header-menu">
+				<li>
+          <a href="/contact">
+            <div class="circulo"><i class="fas fa-comments"></i></div>
+            <p>Contacto</p>
+          </a>
+        </li>
+				<li>
+            <a href="/wishlist">
+            <div class="circulo">
+                <i class="fas fa-heart"></i>
+            </div>
+          <p>wishlist</p>
+        </li>
+				<li>
+          <a href="/productCart">
+            <div class="circulo">
+            <i class="fas fa-shopping-cart"></i>
+            </div>
+          <p>carrito</p>
+          </a>
+        </li>
+				<li>
+          <a href="/register">
+            <div class="circulo">
+              <i class="fas fa-user"></i>
+            </div>
+            <p>Iniciar sesion</p>
+          </a>
+        </li>
+      </ul>
+          <nav id="main-menu">
+              <ul>
+                <li>
+                  <a href="products">
+                    Shop 
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/tematic">
+                      Fiestas tematicas  <i class="fas fa-angle-down"></i>    
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/colors">
+                      Colores 
+                      <i class="fas fa-angle-down"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/gifts">
+                      Regala Candy life
+                    </a>
+                  </li>
+              </ul>
+            </nav>
+  </header>
+  <div class="container-fluid">
+  <section id="banner">
+      <img class="banner-img" src="/images/banner-1.png" alt="navidad"/>
+      <div class="banner-texto columna4">
+        <h5 class="bajada columna6">del 20 de Noviembre al 25 de Diciembre</h5>
+        <h2 class="titulo">Nuevos productos de Navidad</h2>
+        <button class="rojo">Ver mas</button>
+      </div>
+      <div class="lineas"></div>
+  </section>
+  <section id="productos">
+    <div class="container ">
+      <div class="columna3 center">
+        <div class="main-titulo">
+            <h2 >¡Elegí algo dulce!</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+        <div class="columna3 prod">
+          <img src="/images/producto1.png"/>
+          <p class="prod-nombre">Nombre del producto</p>
+          <p class="main-precio">$40,00</p>
+        </div>
+      </div>
+  </div>
+  </section>
+  <section id="redes">
+    <div class="container">
+        <h3 class="columna">
+            ¡Pertenece a la comunidad de <span>Candy-Life!</span>
+        </h3>
+        <div class="redes-container">
+          <a href="https://www.facebook.com/" target="_blank">
+            <div class="icon icon-fb"><i class="fab fa-facebook-f"></i></div>
+          </a>
+          <a href="https://www.twitter.com/" target="_blank">
+            <div class="icon icon-tw"><i class="fab fa-twitter"></i></div>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <div class="icon icon-yt"><i class="fab fa-youtube"></i></div>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <div class="icon icon-in"><i class="fab fa-instagram"></i></div>
+          </a>          
+      </div>
+    </div>
+
+  </section>
+	<footer>
+    <div class="container">
+      <div class="columna2">
+        <a href="/">
+        <img src="/images/logo.png" alt="logo" />
+      </a>
+      </div>
+      <div class="columna2">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/products">Shop</a></li>
+          <li><a href="tematic">Fiestas Tematicas</a></li>
+        </ul>
+      </div>
+      <div class="columna2">
+          <ul>
+              <li><a href="/colors">Colores</a></li>
+              <li><a href="/privacy">Privacidad </a></li>
+              <li><a href="/faqs">FAQs </a></li>
+            </ul>
+      </div>
+      <div class="columna2">
+          <ul>
+              <li><a href="/contact">Contactanos</a></li>
+              <li> <i class="fas fa-phone"></i> 5555-5555</li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:info@candylife.com.ar">info@candylife.com.ar</a></li>
+            </ul>
+      </div>
+    </div>
+  </footer>
+</div>
 </body>
 </html>
