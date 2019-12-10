@@ -3,10 +3,165 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home Page</title>
-	<link rel="stylesheet" href="/css/main.css">
+	<title>Candy Life</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/productoDetail.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  
 </head>
 <body>
-	<h1>detalle producto</h1>
+		<header>
+				<a href="/"><div id="logo"> <img src="/images/logo.png" /></div></a>
+				  <ul id="header-menu">
+				  <li>
+					<a href="/contact">
+					  <div class="circulo"><i class="fas fa-comments"></i></div>
+					  <p>Contacto</p>
+					</a>
+				  </li>
+				  <li>
+					<a href="/wishlist">
+					  <div class="circulo">
+						<i class="fas fa-heart"></i>
+					  </div>
+					  <p>wishlist</p>
+					</a>
+				  </li>
+				  <li>
+					<a href="/productCart">
+					  <div class="circulo">
+					  <i class="fas fa-shopping-cart"></i>
+					  </div>
+					  <p>carrito</p>
+					</a>
+				  </li>
+				  <li>
+					<a href="/register">
+					  <div class="circulo">
+					  <i class="fas fa-user"></i>
+					  </div>
+					  <p>Iniciar sesion</p>
+					</a>
+				  </li>
+				</ul>
+				<nav id="main-menu">
+				<ul>
+				  <li><a href="products">Shop<i class="fas fa-angle-down"></i></a></li>
+				  <li><a href="/tematic">Fiestas tematicas<i class="fas fa-angle-down"></i></a> </li>
+				  <li><a href="/colors">Colores <i class="fas fa-angle-down"></i></a></li>
+				  <li><a href="/gifts">Regala Candy life</a></li>
+				  </ul>
+				</nav>
+			  </header>
+    <section id="main-producto">
+      <div class="container">
+        <div class="breadcum">
+          <a href="/"><i class="fas fa-home"></i></a>
+          <a href="/shop"> Shop <i class="fas fa-angle-right"></i></a>
+          <a href="/gomitas">Gomitas <i class="fas fa-angle-right"></i></a>
+          Haribo
+        </div>
+        <div class="columna5 ">
+          <div class="columna container-img">
+            <img src="/images/haribo.jpg" />
+          </div>
+          <div class="row container-img">
+            <div class="columna2">
+              <img class="thumb" src="/images/thumb-1.jpg"/>
+            </div>
+            <div class="columna2">
+              <img class="thumb" src="/images/thumb-2.jpg"/>
+            </div>
+            <div class="columna2">
+              <img class="thumb" src="/images/thumb-1.jpg"/>
+            </div>
+            <div class="columna2">
+              <img class="thumb" src="/images/thumb-2.jpg"/>
+            </div>
+          </div>
+        </div>
+          <div class="columna4">
+            <div class="detail-prod">
+              <div class="detail-texto">
+                <h3>Gomitas Haribo Ositos de Oro</h3>
+                <p>Bolsa de gomitas multifruta</p>
+                <p class="detail-peso">142grs</p>
+                <p class="detail-precio">
+                  <span>$ 77,80</span>
+                     $68,80</p>
+                <div class="columna1 plus">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="columna2">
+                  <input type="number" maxlength="2"/>
+                </div>
+                <div class="columna1 minus">
+                    <i class="fas fa-minus"></i>
+                </div>
+                
+              </div>
+              <a href="/productCart"><div class="btn-comprar columna4">Agregar al Carrito</div>
+              <a href="/wishlist"><div class="btn-line columna4"><i class="far fa-heart"></i>Añadir a la wishlist</div>
+              </a>
+            </div>
+            <div class="share">
+              Comparte 
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="variantes">
+              <h2>Otras Variantes</h2>
+              <div class="columna3 borde">
+                <img src="/images/variante1.jpg"/>
+                <p>Happy cherries</p>
+              </div>
+              <div class="columna3">
+                <img src="/images/variante2.jpg"/>
+                <p>Berries</p>
+              </div>
+            </div>
+          </div>
+          <div class="columna detail-info">
+            <h3>Descripción</h3>
+            <p>¿Muerdes la cabeza primero o abordas el cuerpo? ¡Sin importar cómo los disfrutes, los osos Haribo Gold Gummi están llenos de sabor afrutado! Toma un puñado de estas gomitas de colores suaves y variados, y disfruta del clásico sabor Haribo. Con 142 grs por bolsas, agregue este dulce azucarado a la piñata en la fiesta de cumpleaños de sus hijos o al buffet de dulces en su próxima celebración. ¡Sea cual sea la ocasión, los osos Haribo Gold Gummi son la solución!
+              </p>
+            <h3>Información Nutricional</h3>
+              <p>
+                  Ingredientes: Jarabe de maíz, azúcar, gelatina, dextrosa, ácido cítrico, almidón de maíz, sabores artificiales y naturales, aceite de coco fraccionado, cera de carnauba, recubrimiento de cera de abejas, colores artificiales amarillo 5, rojo 40, azul 1.</p>
+          </div>
+      </div>
+    </section>
+	<footer>
+		<div class="container-footer">
+			<div class="columna2">
+			<a href="/">
+			<img src="/images/logo.png" alt="logo" />
+			</a>
+			</div>
+			<div class="columna2">
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/products">Shop</a></li>
+				<li><a href="tematic">Fiestas Tematicas</a></li>
+			</ul>
+			</div>
+			<div class="columna2">
+				<ul>
+					<li><a href="/colors">Colores</a></li>
+					<li><a href="/privacy">Privacidad </a></li>
+					<li><a href="/faqs">FAQs </a></li>
+				</ul>
+			</div>
+			<div class="columna2">
+				<ul>
+					<li><a href="/contact">Contactanos</a></li>
+					<li> <i class="fas fa-phone"></i> 5555-5555</li>
+					<li><i class="fas fa-envelope"></i> <a href="mailto:info@candylife.com.ar">info@candylife.com.ar</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
