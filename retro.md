@@ -17,3 +17,5 @@ Empezar:
 
 -Más feedback cruzado antes de la entrega
 -Tener una última reunión/OK final de todas para realizar la entrega
+
+Link trello:https://trello.com/b/Iy9rfXSE/candy-life
