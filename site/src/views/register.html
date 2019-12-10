@@ -4,143 +4,251 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home Page</title>
+  	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/home.css">
 	<link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
-	<section class = "login-register">
-		<h1 class="login-register-title"> Log in | Registrarse</h1>
-	<div class= "main-container">
+	<header>
+			<div id="logo"> <img src="/images/logo.png" /></div>
+			<ul id="header-menu">
+				<li>
+          <a href="/contact">
+            <div class="circulo"><i class="fas fa-comments"></i></div>
+            <p>Contacto</p>
+          </a>
+        </li>
+				<li>
+            <a href="/wishlist">
+            <div class="circulo">
+                <i class="fas fa-heart"></i>
+            </div>
+          <p>wishlist</p>
+        </li>
+				<li>
+          <a href="/productCart">
+            <div class="circulo">
+            <i class="fas fa-shopping-cart"></i>
+            </div>
+          <p>carrito</p>
+          </a>
+        </li>
+				<li>
+          <a href="/register">
+            <div class="circulo">
+              <i class="fas fa-user"></i>
+            </div>
+            <p>Iniciar sesion</p>
+          </a>
+        </li>
+      </ul>
+          <nav id="main-menu">
+              <ul>
+                <li>
+                  <a href="products">
+                    Shop 
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/tematic">
+                      Fiestas tematicas  <i class="fas fa-angle-down"></i>    
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/colors">
+                      Colores 
+                      <i class="fas fa-angle-down"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/gifts">
+                      Regala Candy life
+                    </a>
+                  </li>
+              </ul>
+            </nav>
+  </header>
+  <div class="container-fluid">
+	<section id="Login-registro">
+    <div class="container ">
+			<h2>Log in | Registrarse</h2>
+      <div class="columna3 center">
+			<fieldset class = "fieldset">
+					<h2 class="login-register-login-title">Clientes Candy Life</h2>		
+						<small class="login-register-login-required"> Campos requeridos 
+							<span class="login-register-login-form-required">*
 
-		<fieldset class = "fieldset">
-				<h2 class="login-register-login-title">Clientes Candy Life</h2>		
-					<small class="login-register-login-required"> Campos requeridos <span class="login-register-login-form-required">*</span></small>  	
-	
-				<div class = "login-register-form" data-valition="control group" data-valition-error>
-					<label class= "login label" for="login-email"> E-mail
-						<small class = "login campo requerido" >*</small>
-					</label>
-				<div class = "login control" data-valition = "control">
-					<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
-					<P data-valition-error="block"> <small class = requerido>
-							El E-mail es un campo requerido
-					</small> 
-					</P>
-				</div>
-	
-				<div class = "login-register-form" data-valition="control group" data-valition-error>
-					<label class= "login label" for="login-pass"> Contraseña
+							</span></small>  	
+		
+					<div class = "login-register-form" data-valition="control group" >
+						<label class= "login label" for="login-email"> E-mail
 							<small class = "login campo requerido" >*
+								
 							</small>
 						</label>
-					<div class = "login control" data-valition = "control">
-						<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
-								<P data-valition-error="block"> 
-									<small class=requerido>
-									La contraseña es un campo requerido
-								</small>
-								</P>
 					</div>
-
-				<div class = "login control" data-type = "form-login-action">
-					<button type = "submit" class ="login-register-login-submit" data-action = "login button" > Log in
-					</button>
-					<a class = "login-register-olvido" data-action="olvido-pass">Olvidaste tu contraseña?
-				</a>	
-			</div>
-			
-
-		</fieldset>
-
-		<fieldset class = "fieldset">
-		<div class="register"><div class="register" data-view="Registrarse"></div>
-					<h2 class="login-register-login-title">Registrarse!</h2>
-					<small class="login-register-login-required"> Campos requeridos <span class="login-register-login-form-required">*</span></small>  	
-				<form class = "login-register-form">
-				
+					<div class = "login control" data-valition = "control">
+						<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
+						<P data-valition-error="block"> <small class = requerido>
+								El E-mail es un campo requerido
+						</small> 
+						</P>
+					</div>
 		
-				<div class = "login-register-form" data-valition="control group" data-valition-error>
-
-				<div class = "login-register-form" data-valition="control group" data-valition-error>
+					<div class = "login-register-form" data-valition="control group" data-valition-error>
+						<label class= "login label" for="login-pass"> Contraseña
+								<small class = "login campo requerido" >*
+								</small>
+							</label>
+						<div class = "login control" data-valition = "control">
+							<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
+									<P data-valition-error="block"> 
+										<small class=requerido>
+										La contraseña es un campo requerido
+									</small>
+									</P>
+						</div>
+					</div>
+	
+					<div class = "login control" data-type = "form-login-action">
+						<button type = "submit" class ="login-register-login-submit" data-action = "login button" > Log in
+						</button>
+						<a class = "login-register-olvido" data-action="olvido-pass">Olvidaste tu contraseña?
+					</a>	
+				</div>
 				
+	
+			</fieldset>
+			<fieldset class = "fieldset">
+					<div class="register"><div class="register" data-view="Registrarse"></div>
+								<h2 class="login-register-login-title">Registrarse!</h2>
+								<small class="login-register-login-required"> Campos requeridos <span class="login-register-login-form-required">*</span></small>  	
+							<form class = "login-register-form">
+					</div>		
+					<div class = "login-register-form" data-valition="control group" >
 						<label class= "login label" for="login-pass"> Nombre
+							<small class = "login campo requerido" >*
+								</small>
+							</label>
+					</div>
+					<div class = "login control" data-valition = "control">
+						<input autofocus type = "nombre" type="nombre" id = "register-n" class= "register imput" >
+						</div>
+					<div class = "login-register-form" data-valition="control group" data-valition-error>
+						<label class= "login label" for="login-pass"> Apellido
+											<small class = "login campo requerido" >*
+											</small>
+									</label>
+					</div>
+					<div class = "login control" data-valition = "control">
+					<input autofocus type = "apellido" type="apellido" id = "register-a" class= "register imput" >
+					</div>
+					<div class = "login-register-form" data-valition="control group" data-valition-error>
+						<label class= "login label" for="login-pass"> Domicilio
+						</label>
+					</div>
+						<div class = "login control" data-valition = "control">
+										<input autofocus type = "domicilio" type="domicilio" id = "register-d" class= "register imput" >
+								</div>
+			
+						<label class= "login label" for="login-email"> E-mail
+								<small class = "login campo requerido" >*
+								</small>
+							</label>
+							<div class = "login control" data-valition = "control">
+								<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
+							
+					
+					<div class = "login-register-form" data-valition="control group" data-valition-error>
+							
+						<label class= "login label" for="login-pass"> Contraseña
 								<small class = "login campo requerido" >*
 								</small>
 							
 						</label>
 					</div>
-					<div class = "login control" data-valition = "control">
-							<input autofocus type = "nombre" type="nombre" id = "register-n" class= "register imput" >
-					</div>
-		
-				<div class = "login-register-form" data-valition="control group" data-valition-error>
-				
-						<label class= "login label" for="login-pass"> Apellido
-								<small class = "login campo requerido" >*
-								</small>
-						</label>
-					</div>
-					<div class = "login control" data-valition = "control">
-							<input autofocus type = "apellido" type="apellido" id = "register-a" class= "register imput" >
-					</div>
-		
-		
-				<div class = "login-register-form" data-valition="control group" data-valition-error>
-				
-						<label class= "login label" for="login-pass"> Domicilio
-						</label>
-					</div>
-					<div class = "login control" data-valition = "control">
-							<input autofocus type = "domicilio" type="domicilio" id = "register-d" class= "register imput" >
-					</div>
-
-			<label class= "login label" for="login-email"> E-mail
-					<small class = "login campo requerido" >*
-					</small>
-				</label>
-				<div class = "login control" data-valition = "control">
-					<input autofocus type = "email" type="email" id = "login-email" class= "login imput" placeholder="tunombre@email.com">
-				
-		</div>
-		
-		<div class = "login-register-form" data-valition="control group" data-valition-error>
-				
-			<label class= "login label" for="login-pass"> Contraseña
-					<small class = "login campo requerido" >*
-					</small>
-				
-			</label>
-		</div>
-		
-			<div class = "login control" data-valition = "control">
-					<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
-
-					</div>
-			<div class = "login-register-form" data-valition="control group" data-valition-error>
-				
-					<label class= "login label" for="login-pass"> Confirmar contraseña
-							<small class = "login campo requerido" >*
-								</small>
 					
-					</label>
-				</div>
-						
-			<div class = "login control" data-valition = "control">
-				<input autofocus type = "password" type="password" id = "login-pass" class= "login imput">
-				
-				</div>
-						
-			<div class = "login control" data-type = "form-login-action">
-				<button type = "submit" class ="login-register-login-submit" data-action = "register button" > Crear cuenta
-				</button>
-			</div>
-						
+						<div class = "login control" data-valition = "control">
+								<input autofocus type = "password" type="password" id = "login-pass" class= "login imput" placeholder="Contraseña">
 			
-				
-	</div>
-				
+								</div>
+						<div class = "login-register-form" data-valition="control group" data-valition-error>
+							
+								<label class= "login label" for="login-pass"> Confirmar contraseña
+										<small class = "login campo requerido" >*
+											</small>
+								
+								</label>
+							</div>
+									
+						<div class = "login control" data-valition = "control">
+							<input autofocus type = "password" type="password" id = "login-pass" class= "login imput">
+							
+							</div>
+									
+						<div class = "login control" data-type = "form-login-action">
+							<button type = "submit" class ="login-register-login-submit" data-action = "register button" > Crear cuenta
+							</button>
+						</div>
+									
+			</fieldset>
+	  </div>
+	  
+    </section>
+  <section id="redes">
+    <div class="container">
+        <h3 class="columna">
+            ¡Pertenece a la comunidad de <span>Candy-Life!</span>
+        </h3>
+        <div class="redes-container">
+          <a href="https://www.facebook.com/" target="_blank">
+            <div class="icon icon-fb"><i class="fab fa-facebook-f"></i></div>
+          </a>
+          <a href="https://www.twitter.com/" target="_blank">
+            <div class="icon icon-tw"><i class="fab fa-twitter"></i></div>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <div class="icon icon-yt"><i class="fab fa-youtube"></i></div>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <div class="icon icon-in"><i class="fab fa-instagram"></i></div>
+          </a>          
+      </div>
+    </div>
 
-
-</fieldset>
+  </section>
+	<footer>
+    <div class="container">
+      <div class="columna2">
+        <a href="/">
+        <img src="/images/logo.png" alt="logo" />
+      </a>
+      </div>
+      <div class="columna2">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/products">Shop</a></li>
+          <li><a href="tematic">Fiestas Tematicas</a></li>
+        </ul>
+      </div>
+      <div class="columna2">
+          <ul>
+              <li><a href="/colors">Colores</a></li>
+              <li><a href="/privacy">Privacidad </a></li>
+              <li><a href="/faqs">FAQs </a></li>
+            </ul>
+      </div>
+      <div class="columna2">
+          <ul>
+              <li><a href="/contact">Contactanos</a></li>
+              <li> <i class="fas fa-phone"></i> 5555-5555</li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:info@candylife.com.ar">info@candylife.com.ar</a></li>
+            </ul>
+      </div>
+    </div>
+  </footer>
 </div>
 </body>
 </html>
