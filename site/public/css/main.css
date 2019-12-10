@@ -108,3 +108,11 @@ footer a, footer i{
   color:#ffffff;
   text-decoration: none;
 }
+.container-footer{
+  padding: 2.5%;
+  position: relative;
+}
+.columna2{
+  width:20%;
+  display: inline-block;
+}
