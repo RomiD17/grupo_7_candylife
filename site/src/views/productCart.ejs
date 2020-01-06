@@ -1,66 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Candy Life</title>
-	<link rel="stylesheet" href="/css/main.css">
+    <%- include('./partials/head')%>
 	<link rel="stylesheet" href="/css/productCart.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
-		<header>
-				<a href="/"><div id="logo"> <img src="/images/logo.png" /></div></a>
-				<ul id="header-menu">
-				<li>
-				  <a href="/contact">
-					<div class="circulo"><i class="fas fa-comments"></i></div>
-					<p>Contacto</p>
-				  </a>
-				</li>
-				<li>
-				  <a href="/wishlist">
-					<div class="circulo">
-					  <i class="fas fa-heart"></i>
-					</div>
-					<p>wishlist</p>
-				  </a>
-				</li>
-				<li>
-				  <a href="/productCart">
-					<div class="circulo">
-					<i class="fas fa-shopping-cart"></i>
-					</div>
-					<p>carrito</p>
-				  </a>
-				</li>
-				<li>
-				  <a href="/register">
-					<div class="circulo">
-					<i class="fas fa-user"></i>
-					</div>
-					<p>Iniciar sesion</p>
-				  </a>
-				</li>
-			  </ul>
-			  <nav id="main-menu">
-			  <ul>
-				<li>
-				  <a href="products">Shop<i class="fas fa-angle-down"></i></a>
-				</li>
-				<li>
-				  <a href="/tematic">Fiestas tematicas<i class="fas fa-angle-down"></i>    
-				  </a>
-				</li>
-				<li>
-				  <a href="/colors">Colores <i class="fas fa-angle-down"></i></a>
-				</li>
-				<li>
-				  <a href="/gifts">Regala Candy life</a>
-				</li>
-				</ul>
-			  </nav>
-			</header>
+		<%- include('./partials/header')%>
 	<section id="cart">
     <div class="container">
       <div class="breadcum">
@@ -193,35 +138,6 @@
       </div>
 
   </section>
-	<footer>
-			<div class="container">
-			  <div class="columna2">
-				<a href="/">
-				<img src="/images/logo.png" alt="logo" />
-			  </a>
-			  </div>
-			  <div class="columna2">
-				<ul>
-				  <li><a href="/">Inicio</a></li>
-				  <li><a href="/products">Shop</a></li>
-				  <li><a href="tematic">Fiestas Tematicas</a></li>
-				</ul>
-			  </div>
-			  <div class="columna2">
-				  <ul>
-					  <li><a href="/colors">Colores</a></li>
-					  <li><a href="/privacy">Privacidad </a></li>
-					  <li><a href="/faqs">FAQs </a></li>
-					</ul>
-			  </div>
-			  <div class="columna2">
-				  <ul>
-					  <li><a href="/contact">Contactanos</a></li>
-					  <li> <i class="fas fa-phone"></i> 5555-5555</li>
-					  <li><i class="fas fa-envelope"></i> <a href="mailto:info@candylife.com.ar">info@candylife.com.ar</a></li>
-					</ul>
-			  </div>
-			</div>
-		  </footer>
+  <%- include('./partials/footer')%>
 </body>
 </html>
