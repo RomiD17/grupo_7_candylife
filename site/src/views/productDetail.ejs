@@ -36,12 +36,12 @@
           <div class="columna4">
             <div class="detail-prod">
               <div class="detail-texto">
-                <h3>Gomitas Haribo Ositos de Oro</h3>
-                <p>Bolsa de gomitas multifruta</p>
-                <p class="detail-peso">142grs</p>
+                <h3> <%= products[0].prodNombre %> </h3>
+                <p> <%= products[0].marca %> </p>
+                <p class="detail-peso"> <%= products[0].gramaje %></p>
                 <p class="detail-precio">
-                  <span>$ 77,80</span>
-                     $68,80</p>
+                  <span> <%= products[0].mainPrecio %> </span>
+                  <%= products[0].discountPrecio %></p>
                 <div class="columna1 plus">
                     <i class="fas fa-plus"></i>
                 </div>

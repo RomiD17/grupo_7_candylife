@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const bcrypt = require('bcrypt');
+const path = require("path");
 
-const userFilePath = __dirname + '/../data/users.json';
+const ubicacionProductosJSON = path.join(__dirname, '../data/products.json');
+
+let contenidoProductosJSON = fs.readFileSync(ubicacionProductosJSON, 'utf-8');
 
 //helper function
 function getAllUsers () {
@@ -39,11 +43,13 @@ function getUserById(id) {
 
 const controller = {
 	root: (req, res) => {
-		res.render('index');
-	},
-	productDetail: (req, res) => {
-		res.render('productDetail');
-	},
+		let products = JSON.parse(contenidoProductosJSON);
+			res.render('index', { products });
+	  },
+	  productDetail: (req, res) => {
+		let products = JSON.parse(contenidoProductosJSON);
+		res.render("productDetail", {products});
+	  },
 	productCart: (req, res) => {
 		res.render('productCart');
 	},
@@ -89,11 +95,28 @@ const controller = {
 	productAdd: (req, res) => {
 		res.render('productAdd');
 	},
+
+guardarProducto: (req, res) => {
+	
+	let arrayDeProductos = [];
+	
+	if (contenidoProductosJSON != '') {
+		arrayDeProductos = JSON.parse(contenidoProductosJSON);
+	}
+	req.body = {
+		id: arrayDeProductos.length + 1,
+		...req.body
+	};
+	arrayDeProductos.push(req.body);
+	let contenidoAGuardar = JSON.stringify(arrayDeProductos, null, ' ');
+	fs.writeFileSync(ubicacionProductosJSON, contenidoAGuardar);
+	res.send('¡Producto creado!');
+},
+ 
 	profile: (req, res) => {
 		let userLoged = getUserById(req.params.id);
 
 		res.render('profile', { user: userLoged });
 	}
 };
-
-module.exports = controller
+module.exports = controller;
