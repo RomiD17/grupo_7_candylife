@@ -29,5 +29,21 @@ const controller = {
   productAdd: (req, res) => {
     res.render("productAdd");
   },
+  guardarProducto: (req, res) => {
+	
+		let arrayDeProductos = [];
+		
+		if (contenidoProductosJSON != '') {
+			arrayDeProductos = JSON.parse(contenidoProductosJSON);
+		}
+		req.body = {
+			id: arrayDeProductos.length + 1,
+			...req.body
+		};
+		arrayDeProductos.push(req.body);
+		let contenidoAGuardar = JSON.stringify(arrayDeProductos, null, ' ');
+		fs.writeFileSync(ubicacionProductosJSON, contenidoAGuardar);
+		res.send('¡Producto creado!');
+	},
 };
 module.exports = controller;
