@@ -30,5 +30,4 @@ const controller = {
     res.render("productAdd");
   },
 };
-
 module.exports = controller;
