@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require("path");
@@ -59,7 +59,7 @@ const controller = {
 	store: (req, res) => {
 		let userFinalData = {
 			id: generateUserId(),
-			name: '',
+			name: req.body.name,
 			lastname: req.body.lastname,
 			adress: req.body.adress,
 			email: req.body.email,
