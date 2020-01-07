@@ -18,7 +18,8 @@ const controller = {
 		res.render('index', { products });
   },
   productDetail: (req, res) => {
-    res.render("productDetail");
+    let products = JSON.parse(contenidoProductosJSON);
+    res.render("productDetail", {products});
   },
   productCart: (req, res) => {
     res.render("productCart");
