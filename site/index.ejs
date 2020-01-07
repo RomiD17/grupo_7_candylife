@@ -24,12 +24,14 @@
         </div>
       </div>
       <!--primer fila de productos-->
+      <% products.forEach(unProducto => { %>
       <div class="row">
         <div class="prod-wrap">
           <div class="columna prod">
-            <img src="/images/producto1.png"/>
-            <p class="prod-nombre">Nombre del producto</p>
-            <p class="main-precio">$40,00</p>
+            <img src= <%= unProducto.src %> /> 
+            <>main-precio</prod-nombre>
+            <p class="prod-nombre"> <%= unProducto.prod-nombre %> </p>
+            <p class="main-precio"> <%= unProducto.main-precio %></p>
           </div>
           <a href="/productDetail">
             <div class="over">
@@ -37,94 +39,7 @@
             </div>
           </a>
         </div>
-        <div class="prod-wrap">
-          <div class="columna prod">
-            <img src="/images/producto1.png"/>
-            <p class="prod-nombre">Nombre del producto</p>
-            <p class="main-precio">$40,00</p>
-          </div>
-          <a href="/productDetail">
-            <div class="over">
-              <div class="btn-comprar">comprar</div>
-            </div>
-          </a>
-        </div>
-        <div class="prod-wrap">
-          <div class="columna prod">
-            <img src="/images/producto1.png"/>
-            <p class="prod-nombre">Nombre del producto</p>
-            <p class="main-precio">$40,00</p>
-          </div>
-          <a href="/productDetail">
-            <div class="over">
-              <div class="btn-comprar">comprar</div>
-            </div>
-          </a>
-        </div>
-        <div class="prod-wrap">
-          <div class="columna prod">
-            <img src="/images/producto1.png"/>
-            <p class="prod-nombre">Nombre del producto</p>
-            <p class="main-precio">$40,00</p>
-          </div>
-          <a href="/productDetail">
-            <div class="over">
-              <div class="btn-comprar">comprar</div>
-            </div>
-          </a>
-        </div>
-      </div>
-        <!--segunda fila de productos-->
-      <div class="row">
-          <div class="prod-wrap">
-            <div class="columna prod">
-              <img src="/images/producto1.png"/>
-              <p class="prod-nombre">Nombre del producto</p>
-              <p class="main-precio">$40,00</p>
-            </div>
-            <a href="/productDetail">
-              <div class="over">
-                <div class="btn-comprar">comprar</div>
-              </div>
-            </a>
-          </div>
-          <div class="prod-wrap">
-            <div class="columna prod">
-              <img src="/images/producto1.png"/>
-              <p class="prod-nombre">Nombre del producto</p>
-              <p class="main-precio">$40,00</p>
-            </div>
-            <a href="/productDetail">
-              <div class="over">
-                <div class="btn-comprar">comprar</div>
-              </div>
-            </a>
-          </div>
-          <div class="prod-wrap">
-            <div class="columna prod">
-              <img src="/images/producto1.png"/>
-              <p class="prod-nombre">Nombre del producto</p>
-              <p class="main-precio">$40,00</p>
-            </div>
-            <a href="/productDetail">
-              <div class="over">
-                <div class="btn-comprar">comprar</div>
-              </div>
-            </a>
-          </div>
-          <div class="prod-wrap">
-            <div class="columna prod">
-              <img src="/images/producto1.png"/>
-              <p class="prod-nombre">Nombre del producto</p>
-              <p class="main-precio">$40,00</p>
-            </div>
-            <a href="/productDetail">
-              <div class="over">
-                <div class="btn-comprar">comprar</div>
-              </div>
-            </a>
-          </div>
-        </div>
+        <% }) %>
   </div>
   </section>
   <%- include('./partials/redes')%>
