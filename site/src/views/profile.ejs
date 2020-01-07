@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <section id="perfil">
+        <div class="container">
+            <h2>Bienvenido: <%= `${user.name} ${user.lastname}` %></h2>
+            
+            <ul>
+                <li>Tu correo: <a href="mailto:<%= user.email %>"><%= user.email %></a></li>
+            </ul>
+        </div>	
+    </section>
+	<%- include('./partials/footer') %>    
+</body>
+</html>

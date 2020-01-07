@@ -9,7 +9,12 @@ const mainController = require('../controllers/mainController');
 router.get('/', mainController.root);
 router.get('/productDetail', mainController.productDetail);
 router.get('/productCart', mainController.productCart);
-router.get('/register', mainController.register);
+router.get('/register', mainController.register);//formulario de registracion
+router.post('/register', mainController.store);//creacion de usuario
+router.get('/login', mainController.loginForm);//formulario login
+router.post('/login', mainController.processLogin);//proceso de login
 router.get('/productAdd', mainController.productAdd);
+
+router.get('/profile/:id', mainController.profile);
 
 module.exports = router;
