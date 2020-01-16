@@ -101,11 +101,13 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    flex-flow: wrap;
 }
 .prod{
     text-align: center;
     margin-top:20px;
+   
 }
 .prod img{
     max-width:100%;
@@ -126,6 +128,10 @@
 .prod-wrap{
     position: relative;
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 .prod-wrap:hover .over{
     visibility: visible;
