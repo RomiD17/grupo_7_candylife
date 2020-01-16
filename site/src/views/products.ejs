@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head')%>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+	<%- include('./partials/header')%>
+  <div class="container">
+      <div class="breadcum">
+          <a href="/"><i class="fas fa-home"></i></a>
+          <a href="/shop"> Carrito <i class="fas fa-angle-right"></i></a>
+      </div>
+  </section>
+  <section id="productos">
+    <div class="container ">
+      <div class="columna3 center">
+        <div class="main-titulo">
+            
+        </div>
+      </div>
+      <div class="row">
+          <% products.forEach(unProducto => { %>
+            <div class="prod-wrap">
+              <div class="columna prod">
+                <img src= <%= unProducto.src %> />
+                <p class="prod-nombre"> <%= unProducto.prodNombre %> </p>
+                <p class="main-precio"> <%= unProducto.mainPrecio %> </p>
+              </div>
+              <a href="/productDetail">
+                <div class="over">
+                  <div class="btn-comprar">comprar</div>
+                </div>
+              </a>
+            </div>
+          <% }) %>
+      </div>
+        <!--segunda fila de productos-->
+      
+  </div>
+  </section>
+  <%- include('./partials/redes')%>
+  <%- include('./partials/footer')%>
+	
+</div>
+</body>
+</html>

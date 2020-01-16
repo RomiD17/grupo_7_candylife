@@ -6,10 +6,10 @@ const path = require("path");
 
 //helper function
 
+let products = JSON.parse(contenidoProductosJSON);
 
 const controller = {
 	root: (req, res) => {
-		let products = JSON.parse(contenidoProductosJSON);
 			res.render('index', { products });
 	  },
 };
