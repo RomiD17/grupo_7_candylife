@@ -40,15 +40,18 @@ function getUserById(id) {
 	return userToFind;
 }
 
+let products = JSON.parse(contenidoProductosJSON);
 
 const controller = {
 	root: (req, res) => {
-		let products = JSON.parse(contenidoProductosJSON);
 			res.render('index', { products });
 	  },
 	  productDetail: (req, res) => {
 		let products = JSON.parse(contenidoProductosJSON);
 		res.render("productDetail", {products});
+	  },
+	  products: (req, res) => {
+		  res.render('products', {products});
 	  },
 	productCart: (req, res) => {
 		res.render('productCart');

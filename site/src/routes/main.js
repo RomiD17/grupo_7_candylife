@@ -14,9 +14,8 @@ router.post('/register', mainController.store);//creacion de usuario
 router.get('/login', mainController.loginForm);//formulario login
 router.post('/login', mainController.processLogin);//proceso de login
 router.get('/productAdd', mainController.productAdd);
-router.post('/productAdd', mainController.guardarProducto)
-
-
+router.post('/productAdd', mainController.guardarProducto);
+router.get('/products', mainController.products);//productos
 router.get('/profile/:id', mainController.profile);
 
 module.exports = router;
