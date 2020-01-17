@@ -6,9 +6,10 @@ const ubicacionProductosJSON = path.join(__dirname, '../data/products.json');
 
 let contenidoProductosJSON = fs.readFileSync(ubicacionProductosJSON, 'utf-8');
 
+let products = JSON.parse(contenidoProductosJSON);
+
 const productsControllers = {
 productDetail: (req, res) => {
-    let products = JSON.parse(contenidoProductosJSON);
     res.render("productDetail", {products});
   },
   products: (req, res) => {
