@@ -2,23 +2,20 @@
 <html lang="en">
 <head>
   <%- include('./partials/head')%>
-  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/products.css">
 </head>
 <body>
-	<%- include('./partials/header')%>
+  <%- include('./partials/header')%>
+  
+  <section id="listing">
   <div class="container">
-      <div class="breadcum">
-          <a href="/"><i class="fas fa-home"></i></a>
-          <a href="/shop"> Carrito <i class="fas fa-angle-right"></i></a>
-      </div>
+    <div class="breadcum">
+      <a href="/"><i class="fas fa-home"></i></a>
+       <a href="/products"> Listado de Productos <i class="fas fa-angle-right"></i></a>
+    </div>
+</div>
   </section>
   <section id="productos">
-    <div class="container ">
-      <div class="columna3 center">
-        <div class="main-titulo">
-            
-        </div>
-      </div>
       <div class="row">
           <% products.forEach(unProducto => { %>
             <div class="prod-wrap">
@@ -26,13 +23,13 @@
                 <img src= <%= unProducto.src %> />
                 <p class="prod-nombre"> <%= unProducto.prodNombre %> </p>
                 <p class="main-precio"> <%= unProducto.mainPrecio %> </p>
+                <form action="/products/<%= unProducto.id %>?_method=DELETE" method="POST">
+                  <button type="submit">Borrar</button>
+                </form>
               </div>
-              <a href="/productDetail">
-                <div class="over">
-                  <div class="btn-comprar">comprar</div>
-                </div>
-              </a>
+              
             </div>
+            
           <% }) %>
       </div>
         <!--segunda fila de productos-->

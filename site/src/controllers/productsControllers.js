@@ -9,7 +9,7 @@ let products = JSON.parse(contenidoProductosJSON);
 
 const productsControllers = {
 productDetail: (req, res) => {
-    res.render("productDetail", {products});
+    res.render('productDetail', {products});
   },
   products: (req, res) => {
     res.render('products', {products});
@@ -46,6 +46,15 @@ productDetail: (req, res) => {
         productsModel.update(req.body);
 
         res.redirect('/products/' + req.params.id);
+    },
+    delete: (req, res) => {
+        let productosArray = JSON.parse(contenidoProductosJSON);
+		let productosSinElQueBorramos = productosArray.filter(function (unProducto) {
+			return unProducto.id != req.params.id;
+		})
+		// guardo el array con los productos finales
+		fs.writeFileSync(ubicacionProductosJSON, JSON.stringify(productosSinElQueBorramos, null, ' '));
+		res.redirect('/products');
     }
 
 };
