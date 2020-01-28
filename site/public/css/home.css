@@ -107,10 +107,9 @@
 .prod{
     text-align: center;
     margin-top:20px;
-   
 }
 .prod img{
-    max-width:100%;
+    max-width:250px;
 }
 .prod-nombre{
     font-size: 20px;

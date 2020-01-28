@@ -11,5 +11,8 @@ const controller = {
 	root: (req, res) => {
 			res.render('index', { products });
 	  },
+	  inConstruction: (req, res) => {
+			res.render('inConstruction');
+	  },
 };
 module.exports = controller;

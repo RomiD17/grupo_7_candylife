@@ -16,7 +16,11 @@
         </div>
         <div class="columna5 ">
           <div class="columna container-img">
-            <img src="/images/haribo.jpg" />
+              <% if(product.src.includes('http')){ %>
+                <img src="<%= product.src %> " > 
+                <%} else { %>
+                 <img src="/images/<%= product.src %>" />
+                <% } %> 
           </div>
           <div class="row container-img">
             <div class="columna2">
@@ -36,12 +40,12 @@
           <div class="columna4">
             <div class="detail-prod">
               <div class="detail-texto">
-                <h3> <%= products[0].prodNombre %> </h3>
-                <p> <%= products[0].marca %> </p>
-                <p class="detail-peso"> <%= products[0].gramaje %></p>
+                <h3> <%= product.prodNombre %> </h3>
+                <p> <%= product.marca %> </p>
+                <p class="detail-peso"> <%= product.gramaje %> gms</p>
                 <p class="detail-precio">
-                  <span> <%= products[0].mainPrecio %> </span>
-                  <%= products[0].discountPrecio %></p>
+                  <span> $<%= product.mainPrecio %> </span>
+                  $<%= product.discountPrecio %></p>
                 <div class="columna1 plus">
                     <i class="fas fa-plus"></i>
                 </div>
@@ -53,7 +57,7 @@
                 </div>
                 
               </div>
-              <a href="/productCart"><div class="btn-comprar columna4">Agregar al Carrito</div>
+              <a href="productCart"><div class="btn-comprar columna4">Agregar al Carrito</div>
               <a href="/wishlist"><div class="btn-line columna4"><i class="far fa-heart"></i>Añadir a la wishlist</div>
               </a>
             </div>
@@ -77,11 +81,10 @@
           </div>
           <div class="columna detail-info">
             <h3>Descripción</h3>
-            <p>¿Muerdes la cabeza primero o abordas el cuerpo? ¡Sin importar cómo los disfrutes, los osos Haribo Gold Gummi están llenos de sabor afrutado! Toma un puñado de estas gomitas de colores suaves y variados, y disfruta del clásico sabor Haribo. Con 142 grs por bolsas, agregue este dulce azucarado a la piñata en la fiesta de cumpleaños de sus hijos o al buffet de dulces en su próxima celebración. ¡Sea cual sea la ocasión, los osos Haribo Gold Gummi son la solución!
-              </p>
+            <p> <%= product.detalle %> </p>
             <h3>Información Nutricional</h3>
               <p>
-                  Ingredientes: Jarabe de maíz, azúcar, gelatina, dextrosa, ácido cítrico, almidón de maíz, sabores artificiales y naturales, aceite de coco fraccionado, cera de carnauba, recubrimiento de cera de abejas, colores artificiales amarillo 5, rojo 40, azul 1.</p>
+                  Ingredientes: <%= product.nutricional %> </p>
           </div>
       </div>
     </section>

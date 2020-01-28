@@ -6,6 +6,7 @@ body {
 .container{
     padding: 2.5%;
     position: relative;
+    
   }
   .container-fluid{
     margin: 0!important;
@@ -14,6 +15,7 @@ body {
   .columna1{
     width:10%;
     display: inline-block;
+  
   }
   .columna2{
     width:20%;
@@ -51,6 +53,11 @@ body {
     width:100%;
     display: inline-block;
   }
+  .row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
 .formulariosContainer{
   display: flex;
   justify-content:space-around;
@@ -62,11 +69,11 @@ body {
     padding: 30px;
     border-radius: 10px;
 }
-#login-registro, #nuevoproducto{
+#login-registro, #nuevoproducto, #exito{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 145px;
 }
-#login-registro input, #nuevoproducto input{
+#login-registro input, #nuevoproducto input, textarea{
   padding: 10px;
   border-radius: 8px;
   border: solid 1px #cecece;
@@ -81,7 +88,7 @@ body {
   text-align: center;
   margin:20px 0;
   text-transform: uppercase;
-  width: 90%;
+  width: 100%;
 }
 .btn-register{
   display: flex;
@@ -104,4 +111,9 @@ small{
 ::placeholder {
   color:#cecece;
   font-weight: 200;
+}
+.center{
+  text-align: center;
+  display:flex;
+  margin: auto;
 }

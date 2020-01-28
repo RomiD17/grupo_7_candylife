@@ -1,16 +1,31 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.resolve(__dirname, '../../public/images/products'));
+    },
+    filename: (req, file, cb) => {
+        cb(null, 'product-' + Date.now() + path.extname(file.originalname));
+    }
+});
+
+const upload = multer({ storage });
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsControllers');
-router.get('/productAdd', productsController.productAdd);
-router.post('/productAdd', productsController.guardarProducto);
-router.get('/productsEdit', productsController.editar);
-router.put('/:id', productsController.update);
-router.get('/productDetail', productsController.productDetail);
+
+router.get('/productAdd', productsController.productAdd);// vista del form
+router.post('/productAdd', upload.single('image'), productsController.guardarProducto);// guarda producto
+router.get('/success', productsController.success);// guarda producto
+router.get('/:id/edit', productsController.edit);// formulario editar
+router.put('/:id', upload.single('image'),  productsController.update);// actualizacion
+router.get('/:id', productsController.productDetail);// vista de producto
 router.get('/productCart', productsController.productCart);
-router.get('/', productsController.products);//productos
-router.delete('/:id', productsController.delete);
+router.get('/', productsController.products);//productos todos
+router.delete('/:id', productsController.delete); //boton eliminar productos
 
 module.exports = router;

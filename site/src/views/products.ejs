@@ -18,16 +18,22 @@
   <section id="productos">
       <div class="row">
           <% products.forEach(unProducto => { %>
-            <div class="prod-wrap">
+            <div class="prod-wrap columna3">
               <div class="columna prod">
-                <img src= <%= unProducto.src %> />
+                  <% if(unProducto.src.includes('http')){ %>
+                    <img src="<%= unProducto.src %> " > 
+                    <%} else { %>
+                     <img src="/images/products/<%= unProducto.src %>" />
+                    <% } %> 
                 <p class="prod-nombre"> <%= unProducto.prodNombre %> </p>
-                <p class="main-precio"> <%= unProducto.mainPrecio %> </p>
+                <p class="main-precio">$ <%= unProducto.mainPrecio %> </p>
+                <div class="row">
                 <form action="/products/<%= unProducto.id %>?_method=DELETE" method="POST">
-                  <button type="submit">Borrar</button>
+                  <button class="btn-secundario" type="submit">Borrar</button>
                 </form>
+                <a class="btn-principal" href="/products/<%= unProducto.id %>/edit">editar</a>
               </div>
-              
+            </div>
             </div>
             
           <% }) %>

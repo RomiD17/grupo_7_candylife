@@ -1,37 +1,53 @@
-    <div>
-    <label>Nombre del producto:</label>
-    <input type="text" name="prodNombre">
+<div class="row">
+    <div class="columna4">
+        <div>
+            <label>Nombre del producto:</label>
+            <input type="text" name="prodNombre" value="<%= locals.product ? product.prodNombre : '' %>">
+        </div>
+        <div>
+            <label>Marca del producto:</label>
+            <input type="text" name="marca" value="<%= locals.product ? product.marca : '' %>">
+        </div>
+        <div>
+            <label>Categoría del producto:</label>
+            <input type="text" name="categoria" value="<%= locals.product ? product.categoria : '' %>">
+        </div>
+        <div>
+            <label>Tamaño/gramaje/Kgs:</label>
+            <input type="number" name="gramaje" value="<%= locals.product ? product.gramaje : '' %>">
+        </div>
+            <div>
+                <label>Precio del producto:</label>
+                <input type="text" name="mainPrecio" value="<%= locals.product ? product.mainPrecio : '' %>" >
+            </div>
+            <div>
+                <label>Precio promocional:</label>
+                <input type="number" name="discountPrecio" value="<%= locals.product ? product.discountPrecio : '' %>">
+            </div>
     </div>
-    <div>
-    <label>Marca del producto:</label>
-    <input type="text" name="marca">
-    </div>
-    <div>
-    <label>Categoría del producto:</label>
-    <input type="text" name="categoria">
-    </div>
-    <div>
-    <label>Detalle del producto:</label>
-    <input type="text" name="detalle">
-    </div>
-    <div>
-        <label>Informacion nutricional:</label>
-        <input type="text" name="nutricional">
-    </div>
-    <div>
-        <label>Tamaño/gramaje/Kgs:</label>
-        <input type="number" name="gramaje">
+    <div class="columna5">
+        <div>
+            <label>Detalle del producto:</label>
+            <textarea rows="4" cols="50" name="detalle"> <%= locals.product ? product.detalle : '' %></textarea>
+        </div>
+        <div>
+            <label>Informacion nutricional:</label>
+            <textarea rows="4" cols="50" name="nutricional"> <%= locals.product ? product.detalle : '' %></textarea>
+        </div>
+        
+        <div class="image">
+                <% if (locals.product) { %>
+                    <img class="columna5" src="/images/products/<%= product.src ? product.src : 'default-product-image.png' %>" alt="">
+                    <input type="hidden" name="oldImage" value="<%= product.src %>">
+                <% } %>
+                </div>
+        <div>
+            <label>Adjuntar imagenes:</label>
+            <input type="file" name="src" multiple>
+        </div>
     </div>
 
-    <div>
-        <label>Precio del producto:</label>
-        <input type="text" name="mainPrecio">
-    </div>
-    <div>
-        <label>Precio promocional:</label>
-        <input type="number" name="discount-precio">
-    </div>
-    <div>
-        <label>Adjuntar imagenes:</label>
-        <input type="file" name="img" multiple>
-    </div>
+</div>
+    
+    
+    

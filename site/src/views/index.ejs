@@ -28,11 +28,15 @@
           <% products.forEach(unProducto => { %>
             <div class="prod-wrap">
               <div class="columna prod">
-                <img src= <%= unProducto.src %> />
+                  <% if(unProducto.src.includes('http')){ %>
+                  <img src="<%= unProducto.src %> " > 
+                  <%} else { %>
+                   <img src="/images/products/<%= unProducto.src %>" />
+                  <% } %> 
                 <p class="prod-nombre"> <%= unProducto.prodNombre %> </p>
-                <p class="main-precio"> <%= unProducto.mainPrecio %> </p>
+                <p class="main-precio">$ <%= unProducto.mainPrecio %> </p>
               </div>
-              <a href="/products/productDetail">
+              <a href="/products/<%= unProducto.id %>">
                 <div class="over">
                   <div class="btn-comprar">comprar</div>
                 </div>
