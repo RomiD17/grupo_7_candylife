@@ -50,7 +50,7 @@ const productsControllers = {
 productAdd: (req, res) => {
         res.render('products/productAdd');
     },
-guardarProducto: (req, res) => {
+store: (req, res) => {
     let arrayDeProductos = [];
     if (contenidoProductosJSON != '') {
         arrayDeProductos = products

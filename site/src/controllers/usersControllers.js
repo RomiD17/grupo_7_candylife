@@ -2,6 +2,7 @@
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require("path");
+
 //ubicacion del archivo
 const userFilePath = path.join(__dirname, '../data/users.json');
 //lee el srchivo
@@ -45,7 +46,7 @@ function esditUser(item) {
 }
 
 function generatePk(){
-	let items = this.readJsonFile();
+	let items = users;
 	let lastItem = items.pop();
 	
 	if(lastItem) {
@@ -60,7 +61,7 @@ function save(item) {
 	item.id = generatePk();
 	items.push(item);
 
-	this.writeJsonFile(items);
+	writeJsonFile(items);
 
 	return item.id;
 }
@@ -71,11 +72,23 @@ const usersControllers = {
 		res.render('users/register');
 	},
 	store: (req, res) => {
-		req.body.src = req.file ? req.file.filename : '';
-		req.body.password = bcrypt.hashSync(req.body.password, 10);
-		save(req.body);
-    res.redirect('users/login');
-		
+		let arrayUsers = [];
+    if (usersFileContent != '') {
+			arrayUsers = users
+    }
+    req.body = {
+        id: arrayUsers.length + 1,
+        ...req.body
+    };
+    
+    arrayUsers.push(req.body);
+    let contenidoAGuardar = JSON.stringify(arrayUsers, null, ' ');
+    fs.writeFileSync(userFilePath, contenidoAGuardar);
+		// req.body.src = req.file ? req.file.filename : '';
+		// console.log(req.body.name);
+		//req.body.password = bcrypt.hashSync(req.body.password, 10);
+		//save(req.body);
+    res.redirect('login');
 	},
 	loginForm: (req, res) => {
 		res.render('users/login');
@@ -83,13 +96,14 @@ const usersControllers = {
 	processLogin: (req, res) => {
 		// Buscar usuario por email
 		let user = getUserByEmail(req.body.email);
-
+		
 		// Si encontramos al usuario
 		if (user != undefined) {
+			console.log(bcrypt.hashSync(user.password, 10))
 			// Al ya tener al usuario, comparamos las contraseñas
 			if (bcrypt.compareSync(req.body.password, user.password)) {
 				// Redireccionamos al visitante a su perfil
-				res.redirect(`users/profile/${user.id}`);
+				res.redirect(`/users/profile/${user.id}`);
 			} else {
 				res.send('Credenciales inválidas');
 			}
@@ -104,8 +118,8 @@ const usersControllers = {
          res.redirect('users/' + req.params.id);
 	},
 	profile: (req, res) => {
-		let userLoged = getUserById(req.params.id);
-		res.render('users/profile', { userLoged});
+		let user = getUserById(req.params.id);
+		res.render('users/profile', { user});
 	}
 };
 module.exports = usersControllers;

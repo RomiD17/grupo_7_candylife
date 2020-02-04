@@ -38,19 +38,6 @@
   "src": "http://dummyimage.com/122x227.bmp/cc0000/ffffff"
  },
  {
-  "prodNombre": "quis justo",
-  "marca": "luctus",
-  "categoria": "",
-  "gramaje": "58",
-  "mainPrecio": "7.59",
-  "discountPrecio": "4",
-  "detalle": "    Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque.",
-  "nutricional": "    Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque.",
-  "oldImage": "",
-  "id": "50",
-  "src": ""
- },
- {
   "id": 8,
   "prodNombre": "Pico dulce",
   "marca": "Lheritier",
@@ -75,15 +62,16 @@
   "src": "pico-dulce.jpg"
  },
  {
-  "id": 10,
   "prodNombre": "Pico dulce",
   "marca": "Lheritier",
   "categoria": "chupetines",
-  "detalle": "El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
-  "nutricional": "120 cal",
   "gramaje": "34",
-  "mainPrecio": "400",
+  "mainPrecio": "900",
   "discountPrecio": "360",
+  "detalle": " El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
+  "nutricional": " El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
+  "oldImage": "pico-dulce.jpg",
+  "id": "10",
   "src": "pico-dulce.jpg"
  }
 ]
