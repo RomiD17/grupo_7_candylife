@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include('../partials/head') %>
+	<link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+	<%- include('../partials/header') %>
+  <div class="container-fluid">
+	<section id="login-registro">
+    <div class="container ">
+			<h2>Registrarse</h2>
+      <div class="columna formulariosContainer">
+			<!--Registracion-->
+				<div class="columna4 formularios">
+					<h2 class="login-title">Registrarse!</h2>
+					<small> Campos requeridos <span >*</span></small>
+					<form id="registracion" action="register" method="POST" enctype="multipart/form-data">
+						<%- include('./partials/usersForm')%>
+					<div class="btn-register" >
+						<button type="submit" class="btn-principal" > Crear cuenta
+					</button>
+					</div>
+				</form>
+				</div>
+				<!--Fin resitracion-->
+			</div>
+    </section>
+  
+	<%- include('../partials/redes') %>
+	<%- include('../partials/footer') %>
+</div>
+</body>
+</html>

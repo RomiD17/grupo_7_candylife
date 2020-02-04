@@ -39,18 +39,18 @@ function updateProd(item) {
 const productsControllers = {
  productDetail: (req, res) => {
      let product = findProd(req.params.id)
-     res.render('productDetail', { product});
+     res.render('products/productDetail', { product});
    },
   products: (req, res) => {
-    res.render('products', {products});
+    res.render('products/products', {products});
     },
     productCart: (req, res) => {
-        res.render('productCart');
+        res.render('products/productCart');
     },
-    productAdd: (req, res) => {
-        res.render('productAdd');
+productAdd: (req, res) => {
+        res.render('products/productAdd');
     },
-    guardarProducto: (req, res) => {
+guardarProducto: (req, res) => {
     let arrayDeProductos = [];
     if (contenidoProductosJSON != '') {
         arrayDeProductos = products
@@ -71,7 +71,7 @@ const productsControllers = {
     
      edit: (req, res) => {
         let product = findProd(req.params.id)
-         res.render('productsEdit', { product });
+         res.render('products/productsEdit', { product });
      },
      update: (req, res ) => {
          req.body.id = req.params.id;

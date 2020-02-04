@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<%- include('./partials/head')%>
+	<%- include('../partials/head')%>
 	<link rel="stylesheet" href="/css/register.css">
 
 </head>
 <body>
-	<%- include('./partials/header')%>
+	<%- include('../partials/header')%>
 	  <div class="container-fluid">
 		<section id="nuevoproducto">
 		<div class="container ">
-				<h1>Carga nuevos productos </h1>
-				<small>En nueve simples pasos!</small>
+				<h1>Editar mis productos </h1>
 		<div class="formulariosContainer">
 		  <div class="columna6 formularios">
-				<form action="productAdd" method="POST">	
+				<form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">	
 					<%- include('./partials/productsForm')%>
 					<div class="center columna6">
-						<button class="btn-principal " type="submit">Cargar nuevo producto!</button>
+						<button class="btn-principal" type="submit">Guardar</button>
 					</div>
 					</form>
 				</div>
 		</section>
 		
-		<%- include('./partials/footer')%>
+		<%- include('../partials/footer')%>
 	  </div>	  
 </body>
 </html>
