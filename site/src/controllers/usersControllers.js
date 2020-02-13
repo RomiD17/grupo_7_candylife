@@ -57,7 +57,7 @@ function generatePk(){
 }
 
 function save(item) {
-	let items = usersFileContent;
+	let items = users;
 	item.id = generatePk();
 	items.push(item);
 
@@ -72,22 +72,19 @@ const usersControllers = {
 		res.render('users/register');
 	},
 	store: (req, res) => {
+		req.body.src = req.file ? req.file.filename : '';
+		req.body.password = bcrypt.hashSync(req.body.password, 10);
 		let arrayUsers = [];
-    if (usersFileContent != '') {
+		if (usersFileContent != '') {
 			arrayUsers = users
-    }
-    req.body = {
-        id: arrayUsers.length + 1,
-        ...req.body
-    };
-    
-    arrayUsers.push(req.body);
-    let contenidoAGuardar = JSON.stringify(arrayUsers, null, ' ');
-    fs.writeFileSync(userFilePath, contenidoAGuardar);
-		// req.body.src = req.file ? req.file.filename : '';
-		// console.log(req.body.name);
-		//req.body.password = bcrypt.hashSync(req.body.password, 10);
-		//save(req.body);
+	}
+	req.body = {
+		id: arrayUsers.length + 1,
+		...req.body
+		};
+		arrayUsers.push(req.body);
+		let saveUsers = JSON.stringify(arrayUsers, null, ' ');
+    fs.writeFileSync(userFilePath, saveUsers);
     res.redirect('login');
 	},
 	loginForm: (req, res) => {
@@ -115,11 +112,11 @@ const usersControllers = {
 		req.body.id = req.params.id;
 		req.body.src = req.file ? req.file.filename : req.body.oldImage;
 		esditUser(req.body);
-         res.redirect('users/' + req.params.id);
+         res.redirect('/users/' + req.params.id);
 	},
 	profile: (req, res) => {
 		let user = getUserById(req.params.id);
-		res.render('users/profile', { user});
+		res.render('/users/profile', { user});
 	}
 };
 module.exports = usersControllers;

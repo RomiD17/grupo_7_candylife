@@ -117,3 +117,10 @@ small{
   display:flex;
   margin: auto;
 }
+.invalid-feedback b{
+  color:#dc3545;
+  font-size: 12.8px;
+}
+#login-registro .form-control.is-invalid{
+  border-color: #dc3545; 
+}

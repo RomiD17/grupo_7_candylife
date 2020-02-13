@@ -400,6 +400,22 @@
   "password": "r2hA0EBHvenV"
  },
  {
-  "id": 51
+  "name": "eeee",
+  "lastname": "ffff",
+  "address": "calle 1234",
+  "email": "algo@mail.com",
+  "password": "$2b$10$5RrXaeIrDTINaKsgOmMRC.1GtiX.OgEh1.66VFkp2kW/YbUhro/G2",
+  "rePassword": "12345678",
+  "src": "user-1581462057339.png"
+ },
+ {
+  "id": 52,
+  "name": "jjjj",
+  "lastname": "yyyy",
+  "address": "calle 123",
+  "email": "algo@mail.com",
+  "password": "$2b$10$SI5ul0f54FM7a0JaNWSOquznexBeqkLn3/MTaijgOgxcidDcU6lXm",
+  "rePassword": "",
+  "src": ""
  }
 ]

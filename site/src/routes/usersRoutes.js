@@ -18,9 +18,9 @@ const upload = multer({ storage });
 const usersControllers = require('../controllers/usersControllers');
 
 router.get('/profile/:id', usersControllers.profile);
-router.get('/register',upload.single('image'), usersControllers.register);//formulario de registracion
-router.post('/register', usersControllers.store);//creacion de usuario
-router.put('/:id/edit', upload.single('image'),  usersControllers.edit);// editar
+router.get('/register', usersControllers.register);//formulario de registracion
+router.post('/register',upload.single('src'), usersControllers.store);//creacion de usuario
+router.put('/:id/edit', upload.single('src'),  usersControllers.edit);// editar
 router.get('/login', usersControllers.loginForm);//formulario login
 router.post('/login', usersControllers.processLogin);//proceso de login
 

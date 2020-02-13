@@ -19,10 +19,10 @@ const upload = multer({ storage });
 const productsController = require('../controllers/productsControllers');
 
 router.get('/productAdd', productsController.productAdd);// vista del form
-router.post('/productAdd', upload.single('image'), productsController.store);// guarda producto
+router.post('/productAdd', upload.single('src'), productsController.store);// guarda producto
 router.get('/success', productsController.success);// guarda producto
 router.get('/:id/edit', productsController.edit);// formulario editar
-router.put('/:id', upload.single('image'),  productsController.update);// actualizacion
+router.put('/:id', upload.single('src'),  productsController.update);// actualizacion
 router.get('/:id', productsController.productDetail);// vista de producto
 router.get('/productCart', productsController.productCart);
 router.get('/', productsController.products);//productos todos
