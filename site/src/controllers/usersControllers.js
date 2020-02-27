@@ -116,7 +116,17 @@ const usersControllers = {
 	},
 	profile: (req, res) => {
 		let user = getUserById(req.params.id);
-		res.render('/users/profile', { user});
+		res.render('/users/profile/', {user});
+	},
+	delete: (req,res) => {
+		let usersArray = users;
+		let usersSinElQueBorrams = usersArray.filter(
+			unUser => {
+				return unUser.id != req.param.id;
+			})
+	// guardo el array con los usuarios finales
+	fs.writeFileSync(userFilePath, JSON.stringify(usersSinElQueBorrams, null, ' '));
+		res.redirect('/login');
 	}
 };
 module.exports = usersControllers;

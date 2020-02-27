@@ -23,5 +23,6 @@ router.post('/register',upload.single('src'), usersControllers.store);//creacion
 router.put('/:id/edit', upload.single('src'),  usersControllers.edit);// editar
 router.get('/login', usersControllers.loginForm);//formulario login
 router.post('/login', usersControllers.processLogin);//proceso de login
+router.delete('/:id', usersControllers.delete )
 
 module.exports = router;

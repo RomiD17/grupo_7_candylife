@@ -400,6 +400,7 @@
   "password": "r2hA0EBHvenV"
  },
  {
+  "id": 51,
   "name": "eeee",
   "lastname": "ffff",
   "address": "calle 1234",
@@ -417,5 +418,15 @@
   "password": "$2b$10$SI5ul0f54FM7a0JaNWSOquznexBeqkLn3/MTaijgOgxcidDcU6lXm",
   "rePassword": "",
   "src": ""
+ },
+ {
+  "id": 53,
+  "name": "celeste",
+  "lastname": "perez",
+  "address": "calle 666",
+  "email": "cele@mail.com",
+  "password": "$2b$10$bB2yGuLsFz6JNVj3JHL4suLfN7Dh3mJyN7cobuEWn6xgwu4SV3AHm",
+  "rePassword": "12341234",
+  "src": "user-1582827556155.png"
  }
 ]
