@@ -27,5 +27,6 @@ router.put('/:id/edit', upload.single('src'),  usersControllers.edit);// editar
 router.get('/login', guestRoute,usersControllers.loginForm);//formulario login
 router.post('/login', usersControllers.processLogin);//proceso de login
 router.get('/logout', usersControllers.logout);
+router.delete('/:id', usersControllers.delete )
 
 module.exports = router;

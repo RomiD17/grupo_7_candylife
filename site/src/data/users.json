@@ -400,6 +400,7 @@
   "password": "r2hA0EBHvenV"
  },
  {
+  "id": 51,
   "name": "eeee",
   "lastname": "ffff",
   "address": "calle 1234",
@@ -420,14 +421,14 @@
  },
  {
   "id": 53,
-  "name": "Hola",
-  "lastname": "Chau",
-  "address": "tucuman 1234",
-  "email": "hc@mail.com",
-  "password": "$2b$10$gyhvyV1hGaBO83utWsOYjOKGsYzHqReT/eLTB7XRomoxuxDZ1GXeq",
+  "name": "celeste",
+  "lastname": "perez",
+  "address": "calle 666",
+  "email": "cele@mail.com",
+  "password": "$2b$10$bB2yGuLsFz6JNVj3JHL4suLfN7Dh3mJyN7cobuEWn6xgwu4SV3AHm",
   "rePassword": "12341234",
-  "src": "user-1582068773070.jpg"
- },
+  "src": "user-1582827556155.png"
+  },
  {
   "id": 54,
   "name": "Maria",
