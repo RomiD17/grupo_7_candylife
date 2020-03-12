@@ -1,0 +1,48 @@
+<ul id="header-menu">
+    <li>
+      <a href="/inConstruction">
+        <div class="circulo"><i class="fas fa-comments"></i></div>
+        <p>Contacto</p>
+      </a>
+    </li>
+    <li>
+      <a href="/inConstruction">
+        <div class="circulo">
+          <i class="fas fa-heart"></i>
+        </div>
+        <p>wishlist</p>
+      </a>
+    </li>
+    <li>
+      <a href="/products/productCart">
+        <div class="circulo">
+        <i class="fas fa-shopping-cart"></i>
+        </div>
+        <p>carrito</p>
+      </a>
+    </li>
+
+    <% if(isAuthenticated) { %>
+      <li>
+        <a href="/users/profile">
+                <img class="user-image" src="/images/users/<%= user.src %>" alt="<%= user.name %>">
+                <p><%= user.name %></p>
+        </a>
+      </li>
+      <li>
+        <a href="/users/logout">Salir</a>
+      </li>
+    <% } else { %>
+        <li>
+            <a href="/users/login">
+              <div class="btn-nav-login">  Iniciar sesion</div>
+             
+            </a>
+          </li>
+        <li>
+            <a href="/users/register">
+              <div class="btn-nav-register"> Registrarse</div>
+            </a>
+          </li>
+    <% } %>
+  </ul>

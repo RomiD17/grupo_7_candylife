@@ -28,7 +28,7 @@ function getUserByEmail(email) {
 
 function getUserById(id) {
 	let user = users;
-	return user.find(oneUser => oneUser.id == id);;
+	return user.find(oneUser => oneUser.id == id);
 }
 
 function esditUser(item) {
@@ -94,20 +94,35 @@ const usersControllers = {
 		// Buscar usuario por email
 		let user = getUserByEmail(req.body.email);
 		
-		// Si encontramos al usuario
-		if (user != undefined) {
-			console.log(bcrypt.hashSync(user.password, 10))
-			// Al ya tener al usuario, comparamos las contraseñas
+		if (user) {
 			if (bcrypt.compareSync(req.body.password, user.password)) {
-				// Redireccionamos al visitante a su perfil
-				res.redirect(`/users/profile/${user.id}`);
+					delete user.password;
+					req.session.user = user;
+					res.locals.user = req.session.user;
+					res.redirect('/users/profile');
 			} else {
-				res.send('Credenciales inválidas');
-			}
-		} else {
-			res.send('No hay usuarios registrados con ese email');
-		}
-	},
+					res.render('users/404', { 
+							message: {
+									class: 'error-message',
+									title: 'Inválido',
+									desc: 'Los datos de acceso son inválidos.'
+									}
+							});
+						}
+				} else {
+						res.render('users/404', { 
+								message: {
+										class: 'error-message',
+										title: 'Inexistente',
+										desc: 'El usuario que buscas ya no existe, nunca existió y tal vez nunca exista.'
+								}
+						});
+				}       
+			},
+		logout: (req, res) => {
+			req.session.destroy();
+			res.redirect('/');
+    },
 	edit: (req, res)=>{
 		req.body.id = req.params.id;
 		req.body.src = req.file ? req.file.filename : req.body.oldImage;
@@ -115,8 +130,9 @@ const usersControllers = {
          res.redirect('/users/' + req.params.id);
 	},
 	profile: (req, res) => {
-		let user = getUserById(req.params.id);
-		res.render('/users/profile', { user});
+		let user = getUserById(req.session.user.id);
+		console.log(user)
+		res.render('users/profile', {user});
 	}
 };
 module.exports = usersControllers;

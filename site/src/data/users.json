@@ -417,5 +417,25 @@
   "password": "$2b$10$SI5ul0f54FM7a0JaNWSOquznexBeqkLn3/MTaijgOgxcidDcU6lXm",
   "rePassword": "",
   "src": ""
+ },
+ {
+  "id": 53,
+  "name": "Hola",
+  "lastname": "Chau",
+  "address": "tucuman 1234",
+  "email": "hc@mail.com",
+  "password": "$2b$10$gyhvyV1hGaBO83utWsOYjOKGsYzHqReT/eLTB7XRomoxuxDZ1GXeq",
+  "rePassword": "12341234",
+  "src": "user-1582068773070.jpg"
+ },
+ {
+  "id": 54,
+  "name": "Maria",
+  "lastname": "Sanchez",
+  "address": "calle 3445",
+  "email": "masanchez@mail.com",
+  "password": "$2b$10$EsQHiVdi2AWw0QS/cGhITuE1Gw/XIudh35lDqgQDftC6/WU63IZy2",
+  "rePassword": "1234512345",
+  "src": "user-1583883028397.jpg"
  }
 ]

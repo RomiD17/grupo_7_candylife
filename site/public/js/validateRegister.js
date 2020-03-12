@@ -19,6 +19,9 @@ function validateInput(message, input, typeOfValidator) {
 		case 'isEmail':
 			validation = !validator[typeOfValidator](valorDelCampo);
 			break;
+		case 'equals':
+			validation = !validator[typeOfValidator](valorDelCampo) ;
+			break;
 		default:
 			validation = validator[typeOfValidator](valorDelCampo);
 			break;
@@ -73,6 +76,6 @@ elFormulario.addEventListener('submit', function (event) {
 
 	if (Object.keys(camposConError).length > 0) {
 		event.preventDefault();
-		alert('Hay campos con errores'); 
+		alert('Por favor complete los campos vacios'); 
 	}
 })

@@ -5,6 +5,8 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const auth = require('./middlewares/auth');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -16,6 +18,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+app.use(session({
+  secret: 'Node JSON CRUD',
+  resave: false,
+  saveUninitialized: true
+}));
+app.use(auth);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');

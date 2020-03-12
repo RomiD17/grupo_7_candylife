@@ -16,12 +16,16 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 // ************ Controller Require ************
 const usersControllers = require('../controllers/usersControllers');
+const userRoute = require('../middlewares/userRoute');
+const guestRoute = require('../middlewares/guestRoute');
 
-router.get('/profile/:id', usersControllers.profile);
-router.get('/register', usersControllers.register);//formulario de registracion
+
+router.get('/profile',userRoute, usersControllers.profile);
+router.get('/register', guestRoute, usersControllers.register);//formulario de registracion
 router.post('/register',upload.single('src'), usersControllers.store);//creacion de usuario
 router.put('/:id/edit', upload.single('src'),  usersControllers.edit);// editar
-router.get('/login', usersControllers.loginForm);//formulario login
+router.get('/login', guestRoute,usersControllers.loginForm);//formulario login
 router.post('/login', usersControllers.processLogin);//proceso de login
+router.get('/logout', usersControllers.logout);
 
 module.exports = router;
