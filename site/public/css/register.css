@@ -124,3 +124,9 @@ small{
 #login-registro .form-control.is-invalid{
   border-color: #dc3545; 
 }
+.requerido{
+  color:#dc3545;
+}
+#login-registro input[type=checkbox]{
+  width:auto;
+}

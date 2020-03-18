@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <section class="messages" id="error">
+    <%- include('../partials/header') %>
+    <h1>Upps... eso es un error</h1>
+        <article class="message <%= message.class %>">
+            <h3><%= message.title %></h3>
+            <p class="desc"><%= message.desc %></p>
+        </article>
+    </section>
+	<%- include('../partials/footer') %>    
+</body>
+</html>

@@ -1,3 +1,9 @@
 #perfil{
     margin-top: 155px;
 }
+.profile-img{
+    border-radius: 100%;
+    border: #80E5D2 4px solid;
+    width: 100px;
+    height: 100px;
+}

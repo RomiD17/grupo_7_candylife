@@ -10,7 +10,7 @@
         <div class="container">
             <h2>Bienvenido: <%= `${user.name} ${user.lastname}` %></h2>
             <div>
-                <img src="/images/users/<%= user.src %>" />
+                <img class="profile-img" src="/images/users/<%= user.src %>" />
             </div>
             <ul>
                 <li>Tu correo: <a href="mailto:<%= user.email %>"><%= user.email %></a></li>

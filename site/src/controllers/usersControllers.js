@@ -96,6 +96,7 @@ const usersControllers = {
 		
 		if (user) {
 			if (bcrypt.compareSync(req.body.password, user.password)) {
+				debugger
 					delete user.password;
 					req.session.user = user;
 					res.locals.user = req.session.user;
