@@ -1,31 +1,31 @@
 <div>
   <div>
     <label> Nombre <small class="requerido" >*</small></label>
-    <input type="text" name="name" class="form-control " placeholder="Ingrese su nombre" data-name="nombre">
+    <input type="text" name="name" class="form-control " placeholder="Ingrese su nombre" data-name="nombre" value="<%= locals.users ? users.name : '' %>">
     <div class="invalid-feedback"> </div>
   </div>
   <div>
     <label > Apellido <small class="requerido" >*</small>
     </label>
-    <input type="text" name="lastname" class="form-control " placeholder="Ej: Pérez" data-name="apellido">
+    <input type="text" name="lastname" class="form-control" placeholder="Ej: Pérez" data-name="apellido" value="<%= locals.users ? users.lastname : '' %>">
     <div class="invalid-feedback"> </div>
   </div>
   <div>
     <label > Domicilio</label>
-    <input name="address" type="text" class="form-control " placeholder="Ingrese su domicilio" data-name="domicilio">
+    <input name="address" type="text" class="form-control " placeholder="Ingrese su domicilio" data-name="domicilio" value="<%= locals.users ? users.address : '' %>">
     <div class="invalid-feedback"> </div>
   </div>
   <div>
     <label class= "login label" for="login-email"> E-mail
     <small class="requerido" >*</small>
     </label>
-    <input type="email" name="email" class="form-control" placeholder="tunombre@email.com" data-name="email">
+    <input type="email" name="email" class="form-control" placeholder="tunombre@email.com" data-name="email" value="<%= locals.users ? users.email : '' %>">
     <div class="invalid-feedback"> </div>
   </div>
   <div>
     <label > Contraseña <small class="requerido" >*</small>
     </label>
-    <input type="password" name="password" class="form-control" placeholder="Contraseña" data-name="contraseña">
+    <input type="password" name="password" class="form-control" placeholder="Contraseña" data-name="contraseña" value="<%= locals.users ? users.password : '' %>">
     <div class="invalid-feedback"> </div>
   </div>
   <div>
@@ -37,6 +37,12 @@
   </div>
   <div>
     <label> Avatar</label>
+    <div class="image">
+      <% if (locals.users) { %>
+          <img class="columna5" src="/images/users/<%= users.src ? users.src : 'default-users-image.png' %>" alt="">
+          <input type="hidden" name="oldImage" value="<%= users.src %>">
+      <% } %>
+      </div>
     <input type="file" name="src" data-name="imagen" multiple>
     <div class="invalid-feedback"> </div>
   </div>

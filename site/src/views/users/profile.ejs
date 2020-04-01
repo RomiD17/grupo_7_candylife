@@ -7,16 +7,29 @@
 <body>
     <%- include('../partials/header') %>
     <section id="perfil">
-        <div class="container">
-            <h2>Bienvenido: <%= `${user.name} ${user.lastname}` %></h2>
-            <div>
-                <img class="profile-img" src="/images/users/<%= user.src %>" />
+        <div class="container py-5 ">
+					<div class="row">
+            <div class="col-md-3 m-auto text-center">
+								<img class="profile-img img-fluid " src="/images/users/<%= user.src %>" />
+								<h4 class="user-name mt-5"><%= `${user.name} ${user.lastname}` %></h4>
             </div>
-            <ul>
-                <li>Tu correo: <a href="mailto:<%= user.email %>"><%= user.email %></a></li>
-            </ul>
-        </div>	
+            <div class="col-md-8 text-left">
+							<h2>Datos de personales</h2>
+							<p>Nombre: <%= `${user.name} ${user.lastname}` %></p>
+							<p>Correo: <a href="mailto:<%= user.email %>"><%= user.email %></a></p>
+							<p>Direccion: <a href="mailto:<%= user.email %>"><%= user.address %></a></p>
+							<div class="row">
+									<a class="btn-principal " href="/users/<%= user.id %>/edit">Editar usuario</i></a>
+								<form action="/users/<%= user.id %>?_method=DELETE" method="POST">
+									<button class="btn-secundario" type="submit">Eliminar ususario</button>
+                </form>
+						</div>
+						</div>
+					</div>
+				</div>	
+				
     </section>
-	<%- include('../partials/footer') %>    
+    <%- include('../partials/footer') %>    
+    <%- include('../partials/scripts') %>
 </body>
 </html>

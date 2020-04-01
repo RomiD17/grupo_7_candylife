@@ -23,20 +23,15 @@
     </li>
 
     <% if(isAuthenticated) { %>
-      <li>
-        <a href="/users/profile">
-                <img class="user-image" src="/images/users/<%= user.src %>" alt="<%= user.name %>">
-                <p><%= user.name %></p>
-        </a>
-      </li>
-      <li>
-        <a href="/users/logout">
-          <div class="circulo">
-            <i class="fas fa-sign-out-alt"></i>
-          </div>
-          <p>Cerrar sesion</p>
-        </a>
-      </li>
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="user-image" src="/images/users/<%= user.src %>" alt="<%= user.name %>">  <%= user.name %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="/users/profile">Perfil</a>
+          <a class="dropdown-item" href="/users/logout">Cerrar sesion</a>
+        </div>
+      </div>
     <% } else { %>
         <li>
             <a href="/users/login">

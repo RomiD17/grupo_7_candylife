@@ -14,7 +14,7 @@ let users = JSON.parse(usersFileContent);
 /** Escribe el archivo JSON */
 function writeJsonFile(data) {
 	let jsonData = JSON.stringify(data, null, ' ');
-	fs.writeFileSync(usersFileContent, jsonData);
+	fs.writeFileSync(userFilePath, jsonData);
 }
 function getAllUsers () {
 	let finalUsers = usersFileContent == '' ? [] : users; 
@@ -31,7 +31,7 @@ function getUserById(id) {
 	return user.find(oneUser => oneUser.id == id);
 }
 
-function esditUser(item) {
+function updateUser(item) {
 	let items = users;
 	let updatedItems = items.map(currentItem => {
 			if (currentItem.id == item.id) {
@@ -44,27 +44,34 @@ function esditUser(item) {
 
 	return item.id;
 }
-
-function generatePk(){
+function destroyUser(id) {
 	let items = users;
-	let lastItem = items.pop();
 	
-	if(lastItem) {
-			return ++lastItem.id;
-	}
-
-	return 1;
+	let filteredItems = items.filter(currentItem => currentItem.id != id );
+	
+	writeJsonFile(filteredItems);
 }
 
-function save(item) {
-	let items = users;
-	item.id = generatePk();
-	items.push(item);
+// function generatePk(){
+// 	let items = users;
+// 	let lastItem = items.pop();
+	
+// 	if(lastItem) {
+// 			return ++lastItem.id;
+// 	}
 
-	writeJsonFile(items);
+// 	return 1;
+// }
 
-	return item.id;
-}
+// function save(item) {
+// 	let items = users;
+// 	item.id = generatePk();
+// 	items.push(item);
+
+// 	writeJsonFile(items);
+
+// 	return item.id;
+// }
 
 //CONTROLLERS//
 const usersControllers = {
@@ -96,11 +103,17 @@ const usersControllers = {
 		
 		if (user) {
 			if (bcrypt.compareSync(req.body.password, user.password)) {
-				debugger
 					delete user.password;
 					req.session.user = user;
 					res.locals.user = req.session.user;
-					res.redirect('/users/profile');
+					// Setear en session el ID del usuario
+					req.session.userId = user.id;
+					// Setear la cookie
+				if (req.body.remember) {
+					res.cookie('userCookie', user.id, { maxAge: 60000 * 60 });
+				}
+				// Redireccionamos al visitante a su perfil
+				return	res.redirect('/users/profile');
 			} else {
 					res.render('users/404', { 
 							message: {
@@ -122,13 +135,22 @@ const usersControllers = {
 			},
 		logout: (req, res) => {
 			req.session.destroy();
+			// Destruir la cookie
+			res.cookie('userCookie', null, { maxAge: 1 });
 			res.redirect('/');
     },
 	edit: (req, res)=>{
+		//res.send('editar')
+		let users =	getUserById(req.params.id);
+		res.render('users/userEdit', { users });
+	},
+	update: (req, res ) => {
 		req.body.id = req.params.id;
+		/* Si nos lleva imagen guardamos esa, de lo contrario mantenemos la anterior */
 		req.body.src = req.file ? req.file.filename : req.body.oldImage;
-		esditUser(req.body);
-         res.redirect('/users/' + req.params.id);
+		req.body.password = bcrypt.hashSync(req.body.password, 10);
+		updateUser(req.body);
+		res.redirect('/users/profile');
 	},
 	profile: (req, res) => {
 		let user = getUserById(req.session.user.id);
@@ -136,14 +158,8 @@ const usersControllers = {
 		res.render('users/profile', {user});
 	},
 	delete: (req,res) => {
-		let usersArray = users;
-		let usersSinElQueBorrams = usersArray.filter(
-			unUser => {
-				return unUser.id != req.param.id;
-			})
-	// guardo el array con los usuarios finales
-	fs.writeFileSync(userFilePath, JSON.stringify(usersSinElQueBorrams, null, ' '));
-		res.redirect('/login');
+		destroyUser(req.params.id);
+    res.redirect('/');
 	}
 };
 module.exports = usersControllers;

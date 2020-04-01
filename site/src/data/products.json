@@ -1,18 +1,5 @@
 [
  {
-  "prodNombre": "erat volutpat in",
-  "marca": "quam",
-  "categoria": "",
-  "gramaje": "95",
-  "mainPrecio": "0.65",
-  "discountPrecio": "",
-  "detalle": " Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.",
-  "nutricional": " Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.",
-  "oldImage": "http://dummyimage.com/172x159.jpg/dddddd/000000",
-  "id": "4",
-  "src": "http://dummyimage.com/172x159.jpg/dddddd/000000"
- },
- {
   "prodNombre": "nisi nam",
   "marca": "tincidunt eget tempus",
   "categoria": "caramelo",

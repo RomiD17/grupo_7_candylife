@@ -10,24 +10,27 @@
 	<section id="login-registro">
     <div class="container ">
 			<h2>Editar usuario</h2>
-      <div class="columna formulariosContainer">
+      <div class="columna col-sm-12 col-md-8 mx-auto formulariosContainer">
 			<!--Registracion-->
-				<div class="columna4 formularios">
+				<div class="columna4 col-sm-12 formularios">
 					<small> Campos requeridos <span >*</span></small>
 					<form id="registracion" action="/users/<%= users.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 						<%- include('./partials/usersForm')%>
+						<div class="row ">
+								<a class="btn-secundario" href="/users/profile">Cancelar</a>
 					<div class="btn-register" >
-						<button type="submit" class="btn-principal" > Guardar cambios
-					</button>
+						<button type="submit" class="btn-principal" > Guardar cambios</button>
 					</div>
+				</div>
 				</form>
 				</div>
 				<!--Fin resitracion-->
 			</div>
     </section>
   
+	</div>
 	<%- include('../partials/redes') %>
 	<%- include('../partials/footer') %>
-</div>
+<%- include('../partials/scripts') %>
 </body>
 </html>

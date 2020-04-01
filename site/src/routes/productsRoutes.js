@@ -23,8 +23,8 @@ router.post('/productAdd', upload.single('src'), productsController.store);// gu
 router.get('/success', productsController.success);// guarda producto
 router.get('/:id/edit', productsController.edit);// formulario editar
 router.put('/:id', upload.single('src'),  productsController.update);// actualizacion
+router.get('/productCart', productsController.productCart);//carrito de compras
 router.get('/:id', productsController.productDetail);// vista de producto
-router.get('/productCart', productsController.productCart);
 router.get('/', productsController.products);//productos todos
 router.delete('/:id', productsController.delete); //boton eliminar productos
 

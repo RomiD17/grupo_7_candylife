@@ -13,82 +13,26 @@
           <a href="/shop"> Carrito <i class="fas fa-angle-right"></i></a>
       </div>
       <div class="row main-cart" >
-        <div class="columna6">
+        <div class="col-md-7">
             <div class="buscador">
                 <h3>¿Te olvidaste algo? ¡Buscá Rápido!</h3>
                 <input type="text" placeholder="Ingresá SKU, nombre, marca">
                 <i class="fas fa-search"></i>
             </div>
-            <div class="list-container">
+            <div class="list-container row">
               <!--item1-->
               <div class="list-item">
-                <div class="columna2 item-img">
-                    <img src="/images/haribo.jpg"/>
+                <div class="col-md-3">
+                    <img class="img-fluid" src="/images/haribo.jpg"/>
                     <i class="fas fa-heart"></i>
                 </div>
-                <div class="detail-texto columna3">
-                    <h3>Gomitas Haribo Ositos de Oro</h3>
+                <div class="col-md-5 detail-texto">
+                    <h5>Gomitas Haribo Ositos de Oro</h5>
                     <p>Bolsa de gomitas multifruta</p>
                     <p class="detail-peso">142grs</p>
                     <p class="cantidad"> Cantidad</p>
                 </div>
-                <div class="columna3 numeros">
-                    <i class="fas fa-trash-alt" ></i>
-                    <p class="detail-precio">
-                        <span>$ 77,80</span>
-                           $68,80</p>
-                    <div class="columna1 plus">
-                      <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="columna3">
-                      <input type="number" value="1" maxlength="2"/>
-                    </div>
-                    <div class="columna1 minus">
-                      <i class="fas fa-minus"></i>
-                    </div>
-                </div>
-                </div>
-              <!--item2-->
-              <div class="list-item">
-                <div class="columna2 item-img">
-                    <img src="/images/haribo.jpg"/>
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="detail-texto columna3">
-                    <h3>Gomitas Haribo Ositos de Oro</h3>
-                    <p>Bolsa de gomitas multifruta</p>
-                    <p class="detail-peso">142grs</p>
-                    <p class="cantidad"> Cantidad</p>
-                </div>
-                <div class="columna3 numeros">
-                    <i class="fas fa-trash-alt" ></i>
-                    <p class="detail-precio">
-                        <span>$ 77,80</span>
-                           $68,80</p>
-                    <div class="columna1 plus">
-                      <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="columna3">
-                      <input type="number" value="1" maxlength="2"/>
-                    </div>
-                    <div class="columna1 minus">
-                      <i class="fas fa-minus"></i>
-                    </div>
-                </div>
-                </div>
-              <!--item3-->
-              <div class="list-item">
-                <div class="columna2 item-img">
-                    <img src="/images/haribo.jpg"/>
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="detail-texto columna3">
-                    <h3>Gomitas Haribo Ositos de Oro</h3>
-                    <p>Bolsa de gomitas multifruta</p>
-                    <p class="detail-peso">142grs</p>
-                    <p class="cantidad"> Cantidad</p>
-                </div>
-                <div class="columna3 numeros">
+                <div class="col-md-4 numeros">
                     <i class="fas fa-trash-alt" ></i>
                     <p class="detail-precio">
                         <span>$ 77,80</span>
@@ -105,21 +49,22 @@
                 </div>
                 </div>
               </div>
+              
             </div>
         <!--columna derecha-->
-        <div class="columna4">
-          <div class="total">
+        <div class="col-md-5">
+          <div class="total col-md-12 p-4">
             <h3>Subtotal:</h3> 
             <div class="row">
-            <div class="columna4 texto">
+            <div class="col-md-4 texto">
               <p>3 items</p>
               <p>Código promocional</p>
               <p>CP</p>
             </div>
-            <div class="columna5 ">
+            <div class="col-md-5 ">
              <p class="precio">$ 198,59</p>
-             <p class="text-right"><input type="text" placeholder="Ejemplo XXYYZZ"/></p>
-             <p class="text-right"><input type="text" placeholder="Ejemplo 1640"/></p>
+             <input class="text-right form-control"  type="text" placeholder="Ejemplo XXYYZZ"/>
+             <input class="text-right form-control" type="text" placeholder="Ejemplo 1640"/>
             </div>
            
             </div>
@@ -139,5 +84,6 @@
 
   </section>
   <%- include('../partials/footer')%>
+  <%- include('../partials/scripts') %>
 </body>
 </html>

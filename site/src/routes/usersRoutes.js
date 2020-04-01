@@ -23,10 +23,11 @@ const guestRoute = require('../middlewares/guestRoute');
 router.get('/profile',userRoute, usersControllers.profile);
 router.get('/register', guestRoute, usersControllers.register);//formulario de registracion
 router.post('/register',upload.single('src'), usersControllers.store);//creacion de usuario
-router.put('/:id/edit', upload.single('src'),  usersControllers.edit);// editar
+router.get('/:id/edit', upload.single('src'),  usersControllers.edit);// editar
+router.put('/:id', upload.single('src'),  usersControllers.update);// actualizacion
+router.delete('/:id', usersControllers.delete ) //eliminar usuario
 router.get('/login', guestRoute,usersControllers.loginForm);//formulario login
 router.post('/login', usersControllers.processLogin);//proceso de login
 router.get('/logout', usersControllers.logout);
-router.delete('/:id', usersControllers.delete )
 
 module.exports = router;
