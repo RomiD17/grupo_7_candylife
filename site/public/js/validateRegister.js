@@ -45,10 +45,10 @@ function validateInput(message, input, typeOfValidator) {
 		delete camposConError[input.name];
 	}
 }
-let password = document.querySelector('#password');
-if( password.value.length > 8){
-  console.log('Hubo un error en el password')
-}
+// let password = document.querySelector('#password');
+// if( password.value.length > 8){
+//   console.log('Hubo un error en el password')
+// }
 // Iteramos sobre el array de campos
 for (const unCampo of camposDelFormulario) {
 	// A cada campo le pasamos el evento blur
@@ -65,12 +65,13 @@ for (const unCampo of camposDelFormulario) {
 		})
 	}
 
-	if (unCampo.password.value.length > 8 ){	
-		unCampo.addEventListener('blur', function () {
-			if (!validator.isEmpty(unCampo.value)) {
-				validateInput('debe tener mas de 8 caracteres', this, 'password');
-			}
-		})
+	// if (unCampo.password.value.length > 8 ){	
+	// 	unCampo.addEventListener('blur', function () {
+	// 		if (!validator.isEmpty(unCampo.value)) {
+	// 			validateInput('debe tener mas de 8 caracteres', this, 'password');
+	// 		}
+	// 	})
+	// }
 }
 
 elFormulario.addEventListener('submit', function (event) {
