@@ -1,4 +1,7 @@
 import React from 'react';
+import db from '../components/data/products';
+
+console.log(db);
 
 function Table(){
     return(
@@ -8,24 +11,14 @@ function Table(){
                 <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Categories</th>
-                            <th>Colors</th>
-                            <th>Stock</th>
+                            <th>Producto</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Categorias</th>
+                            <th>Marca</th>
+                            <th>Precio Desc</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Categories</th>
-                            <th>Colors</th>
-                            <th>Stock</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <tr>
                             <td>Tiger Nixon</td>
