@@ -27,6 +27,7 @@ app.use(session({
 app.use(auth);
 app.use(userCookie);
 
+
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
 app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"

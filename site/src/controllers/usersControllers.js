@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const path = require("path");
 
 //ubicacion del archivo
-const userFilePath = path.join(__dirname, '../data/users.json');
+const userFilePath = path.join(__dirname, '../database/users.json');
 //lee el srchivo
 let usersFileContent = fs.readFileSync(userFilePath, 'utf-8');
 

@@ -1,19 +1,44 @@
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require("path");
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+//la parte nueva de MYSQL: promesa de sequelize para que en la promesa devuelva un
+//product y un catch que recibe un error
+const controller = {
+    index: (req, res) => {
+		sequelize
+		.query('select * from products')
+		.then(results => {
+        	return res.render('products/index', { products: results[0] });
+		})
+		.catch(error => console.log(error));
+	}
+}
+
+module.exports = controller; 
 
 //direccion de porductos
-const ubicacionProductosJSON = path.join(__dirname, '../data/products.json');
+const ubicacionProductosJSON = path.join(__dirname, '../database/products.json');
 //lee archivo
 let contenidoProductosJSON = fs.readFileSync(ubicacionProductosJSON, 'utf-8');
 //pasa el json para que se muestre
-let products = JSON.parse(contenidoProductosJSON);
+//let products = JSON.parse(contenidoProductosJSON);
 
 //Funciones
 /** Escribe el archivo JSON */
 function writeJsonFile(data) {
     let jsonData = JSON.stringify(data, null, ' ');
     fs.writeFileSync(ubicacionProductosJSON, jsonData);
+}
+function getDB () {
+	sequelize
+		.query('select * from products')
+		.then(results => {
+        	return results[0]
+		})
+		.catch(error => console.log(error));
 }
 
 function findProd(id) {
@@ -39,8 +64,9 @@ const productsControllers = {
 	productDetail: (req, res) => {
 		let product = findProd(req.params.id)
 		res.render('products/productDetail', { product});
-	},
+	}, 
 	products: (req, res) => {
+		let products = getDB()
 		res.render('products/products', {products});
 	},
 	productCart: (req, res) => {

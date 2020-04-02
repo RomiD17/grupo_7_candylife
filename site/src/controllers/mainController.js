@@ -2,7 +2,7 @@
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require("path");
-const ubicacionProductosJSON = path.join(__dirname, '../data/products.json');
+const ubicacionProductosJSON = path.join(__dirname, '../database/products.json');
 
 let contenidoProductosJSON = fs.readFileSync(ubicacionProductosJSON, 'utf-8');
 let products = JSON.parse(contenidoProductosJSON);
