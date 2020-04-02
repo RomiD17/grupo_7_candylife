@@ -1,9 +1,20 @@
-import React from 'react';
-import db from '../components/data/products';
+import React, {useState, useEffect} from 'react';
 
-console.log(db);
 
 function Table(){
+    const [products, setProducts] = useState([]) //array de 2 elementos: el dato (producto) y el metodo q modifica el dato tipo upd
+    useEffect(() => {
+        fetch("http://localhost:3000/products/api") //llamada asíncrona
+        .then(res => res.json())
+        .then(resobject => {
+                setProducts(resobject);
+            } )
+        .catch(console.log);
+      }, []);
+      useEffect(() => {
+        console.table(products);
+        }, [products]);
+   
     return(
     <div className="card shadow mb-4">
         <div className="card-body">
@@ -20,9 +31,11 @@ function Table(){
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
+                        {
+                        products.map(product => (
+                            <tr>
+                            <td> {product.prodNombre} </td>
+                            <td>Fullstack developer</td>
                             <td>$320,800</td>
                             <td>
                                 <ul>
@@ -39,7 +52,9 @@ function Table(){
                                 </ul>
                             </td>
                             <td>245</td>
-                        </tr>
+                        </tr>  
+                        ) )    
+                        }
                         <tr>
                             <td>Jane Doe</td>
                             <td>Fullstack developer</td>

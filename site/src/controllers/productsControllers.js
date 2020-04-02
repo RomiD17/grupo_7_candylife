@@ -35,7 +35,6 @@ function updateProd(item) {
     return item.id;
 }
 
-
 const productsControllers = {
 	productDetail: (req, res) => {
 		let product = findProd(req.params.id)
@@ -43,7 +42,12 @@ const productsControllers = {
 	},
 	products: (req, res) => {
 		res.render('products/products', {products});
+		
 	},
+	productsjson: (req, res) => {
+		res.json(products)
+	},
+
 	productCart: (req, res) => {
 		let product = findProd(req.params.id)
 		res.render('products/productCart', { product});

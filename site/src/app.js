@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const auth = require('./middlewares/auth');
 const userCookie = require('./middlewares/userCookie');
+const cors = require('./middlewares/cors');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -26,6 +27,7 @@ app.use(session({
 }));
 app.use(auth);
 app.use(userCookie);
+app.use(cors);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
