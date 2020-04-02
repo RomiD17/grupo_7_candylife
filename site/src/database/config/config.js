@@ -7,7 +7,6 @@ module.exports =
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false,
-    "port": 3309
   },
   //Luchi
   //"development": {
