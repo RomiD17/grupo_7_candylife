@@ -66,7 +66,6 @@
   "marca": "Bubaloo",
   "categoria": "Chicle",
   "gramaje": "100",
-<<<<<<< HEAD
   "mainPrecio": "99",
   "discountPrecio": "80",
   "detalle": "El mejor chicle de la infancia! ",
@@ -119,8 +118,7 @@
   "discountPrecio": "15",
   "detalle": "El chupetin que no puede faltar.  ",
   "nutricional": "0 ",
-  "src": "cocacola.jpeg"
-=======
+  "src": "cocacola.jpeg",
   "mainPrecio": "8.72",
   "discountPrecio": "",
   "detalle": "  Nullam varius.",
@@ -140,6 +138,5 @@
   "detalle": " el amntecol para las fiestas es lo mwjor",
   "nutricional": "grasas natirales, bueno para compartir ",
   "src": "prod-1585806871557.jpg"
->>>>>>> 59336542a47ff2f94a6f87a9c1f1abaeae013d98
  }
 ]
