@@ -53,18 +53,17 @@
 						<textarea data-name="informacion nutricional" rows="6" cols="50" name="nutricional"> <%= locals.product ? product.nutricional : '' %></textarea>
 						<div class="invalid-feedback"> </div>
         </div>
-        
-        <div class="form-group image">
+        <div>
+				<label>Adjuntar imagenes:</label>
+        <div class="image">
 						<% if (locals.product) { %>
 								<img class="columna5" src="/images/products/<%= product.src ? product.src : 'default-product-image.png' %>" alt="">
 								<input type="hidden" name="oldImage" value="<%= product.src %>">
 						<% } %>
 						</div>
-        <div class="form-group">
-            <label>Adjuntar imagenes:</label>
-            <input type="file" name="src" accept="image/x-png,image/gif,image/jpeg, image/jpg" data-name="Imagen" multiple>
+            <input type="file" name="src" accept="image/x-png,image/gif,image/jpeg, image/jpg" data-name="Imagen" >
 						<div class="invalid-feedback"> </div>
-				</div>
+					</div>
     </div>
 </div>
     

@@ -66,6 +66,7 @@
   "marca": "Bubaloo",
   "categoria": "Chicle",
   "gramaje": "100",
+<<<<<<< HEAD
   "mainPrecio": "99",
   "discountPrecio": "80",
   "detalle": "El mejor chicle de la infancia! ",
@@ -119,5 +120,26 @@
   "detalle": "El chupetin que no puede faltar.  ",
   "nutricional": "0 ",
   "src": "cocacola.jpeg"
+=======
+  "mainPrecio": "8.72",
+  "discountPrecio": "",
+  "detalle": "  Nullam varius.",
+  "nutricional": "  Nullam varius.",
+  "oldImage": "http://dummyimage.com/106x183.png/ff4444/ffffff",
+  "id": "5",
+  "src": "http://dummyimage.com/106x183.png/ff4444/ffffff"
+ },
+ {
+  "id": 12,
+  "prodNombre": "mantecol",
+  "marca": "georgalo",
+  "categoria": "fiestas",
+  "gramaje": "234",
+  "mainPrecio": "123",
+  "discountPrecio": "190",
+  "detalle": " el amntecol para las fiestas es lo mwjor",
+  "nutricional": "grasas natirales, bueno para compartir ",
+  "src": "prod-1585806871557.jpg"
+>>>>>>> 59336542a47ff2f94a6f87a9c1f1abaeae013d98
  }
 ]

@@ -6,38 +6,39 @@
 </head>
 <body>
 		<%- include('../partials/header')%>
-    <section id="main-producto">
-      <div class="container">
+    <section id="main-producto" class="mb-5">
+      <div class="container pb-5">
         <div class="breadcum">
           <a href="/"><i class="fas fa-home"></i></a>
           <a href="/shop"> Shop <i class="fas fa-angle-right"></i></a>
           <a href="/gomitas">Gomitas <i class="fas fa-angle-right"></i></a>
           Haribo
         </div>
-        <div class="columna5 ">
-          <div class="columna container-img">
+        <div class="row">
+        <div class="col-md-6">
+          <div class="col-md-7 mx-auto d-block container-img">
               <% if(product.src.includes('http')){ %>
                 <img src="<%= product.src %> " > 
                 <%} else { %>
-                 <img src="/images/products/<%= product.src %>" />
+                 <img class="img-fluid mx-auto" src="/images/products/<%= product.src %>" />
                 <% } %> 
           </div>
           <div class="row container-img">
-            <div class="columna2">
-              <img class="thumb" src="/images/thumb-1.jpg"/>
+            <div class="col-md-2">
+              <img class="thumb img-fluid" src="/images/thumb-1.jpg"/>
             </div>
-            <div class="columna2">
-              <img class="thumb" src="/images/thumb-2.jpg"/>
+            <div class="col-md-2">
+              <img class="thumb img-fluid" src="/images/thumb-2.jpg"/>
             </div>
-            <div class="columna2">
-              <img class="thumb" src="/images/thumb-1.jpg"/>
+            <div class="col-md-2">
+              <img class="thumb img-fluid" src="/images/thumb-1.jpg"/>
             </div>
-            <div class="columna2">
-              <img class="thumb" src="/images/thumb-2.jpg"/>
+            <div class="col-md-2">
+              <img class="thumb img-fluid" src="/images/thumb-2.jpg"/>
             </div>
           </div>
         </div>
-          <div class="columna4">
+          <div class="col-md-6">
             <div class="detail-prod">
               <div class="detail-texto">
                 <h3> <%= product.prodNombre %> </h3>
@@ -46,20 +47,23 @@
                 <p class="detail-precio">
                   <span> $<%= product.mainPrecio %> </span>
                   $<%= product.discountPrecio %></p>
-                <div class="columna1 plus">
-                    <i class="fas fa-plus"></i>
+                <div class="row">
+                  <div class="col-md-1 plus">
+                      <i class="fas fa-plus"></i>
+                  </div>
+                  <div class="col-md-2">
+                    <input type="number" maxlength="2"/>
+                  </div>
+                  <div class="col-md-2 minus">
+                      <i class="fas fa-minus"></i>
+                  </div>
                 </div>
-                <div class="columna2">
-                  <input type="number" maxlength="2"/>
-                </div>
-                <div class="columna1 minus">
-                    <i class="fas fa-minus"></i>
-                </div>
-                
               </div>
-              <a href="productCart"><div class="btn-comprar columna4">Agregar al Carrito</div>
-              <a href="/wishlist"><div class="btn-line columna4"><i class="far fa-heart"></i>Añadir a la wishlist</div>
+              <div class="row">
+                <a href="productCart"><div class="btn-comprar mr-3">Agregar al Carrito</div>
+                <a href="/wishlist"><div class="btn-line "><i class="far fa-heart"></i>Añadir a la wishlist</div>
               </a>
+            </div>
             </div>
             <div class="share">
               Comparte 
@@ -69,17 +73,20 @@
             </div>
             <div class="variantes">
               <h2>Otras Variantes</h2>
-              <div class="columna3 borde">
-                <img src="/images/variante1.jpg"/>
-                <p>Happy cherries</p>
-              </div>
-              <div class="columna3">
-                <img src="/images/variante2.jpg"/>
-                <p>Berries</p>
+              <div class="row">
+                <div class="columna3 borde">
+                  <img src="/images/variante1.jpg"/>
+                  <p>Happy cherries</p>
+                </div>
+                <div class="columna3">
+                  <img src="/images/variante2.jpg"/>
+                  <p>Berries</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="columna detail-info">
+        </div>
+          <div class="col-md-12 mb-5  detail-info">
             <h3>Descripción</h3>
             <p> <%= product.detalle %> </p>
             <h3>Información Nutricional</h3>
