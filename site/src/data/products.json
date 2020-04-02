@@ -110,18 +110,6 @@
  },
  {
   "id": 12,
-  "prodNombre": "mantecol",
-  "marca": "georgalo",
-  "categoria": "fiestas",
-  "gramaje": "234",
-  "mainPrecio": "123",
-  "discountPrecio": "190",
-  "detalle": " el amntecol para las fiestas es lo mwjor",
-  "nutricional": "grasas natirales, bueno para compartir ",
-  "src": "prod-1585806871557.jpg"
- },
- {
-  "id": 12,
   "prodNombre": "Chocolate Vauquita",
   "marca": "Vauquita",
   "categoria": "Chocholate",
@@ -167,17 +155,5 @@
   "detalle": "El clasico chicle de menta a un precio especial ",
   "nutricional": "10 ",
   "src": "prod-1585812786701.jpeg"
- },
- {
-    "id": 7,
-    "prodNombre": "Chupetin Pico Dulce",
-    "marca": "Arcor",
-    "categoria": "Chupetin",
-    "gramaje": "20",
-    "mainPrecio": "22",
-    "discountPrecio": "19",
-    "detalle": " Un ejemplo perfecto para corroborar que \"bien hecho\" no tiene que significar \"alto precio\". El Pico Dulce logró traspasar las barreras generacionales, y gustar a chicos y adolescentes en base a sus múltiples colores, y a un sabor que deambula muy bien en el delicado equilibrio de lo dulce y lo ácido. Muy buena página web.\r\n\r\n",
-    "nutricional": " 1",
-    "src": "4.jpg"
-   }
+ }
 ]

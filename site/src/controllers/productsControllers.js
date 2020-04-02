@@ -1,6 +1,8 @@
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require("path");
+const db = require('../database/models');
+const sequelize = db.sequelize;
 const { check, validationResult, body } = require('express-validator');
 
 //direccion de porductos
@@ -34,15 +36,20 @@ function updateProd(item) {
 
     return item.id;
 }
-
-
 const productsControllers = {
+	//listado de productos
+	index: (req, res) => {
+		sequelize
+			.query('SELECT * FROM products')
+			.then( results => {
+				//return res.send(results)
+				return res.render('products/products', { products: results[0] });
+			})
+			.catch(error => console.log(error));
+	},
 	productDetail: (req, res) => {
 		let product = findProd(req.params.id)
 		res.render('products/productDetail', { product});
-	},
-	products: (req, res) => {
-		res.render('products/products', {products});
 	},
 	productCart: (req, res) => {
 		let product = findProd(req.params.id)

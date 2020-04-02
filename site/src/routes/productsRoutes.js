@@ -27,15 +27,17 @@ const validateProduct = [
 const productsController = require('../controllers/productsControllers');
 
 // ************ Rutas ************
+
 router.get('/productAdd', productsController.productAdd);// vista del form
 router.post('/productAdd',upload.single('src'),validateProduct, productsController.store);// guarda producto
 
+router.get('/', productsController.index);//productos todos sql
 router.get('/success', productsController.success);// guarda producto
 router.get('/:id/edit',upload.single('src'),validateProduct, productsController.edit);// formulario editar
 router.put('/:id', upload.single('src'), validateProduct, productsController.update);// actualizacion
 router.get('/productCart', productsController.productCart);//carrito de compras
 router.get('/:id', productsController.productDetail);// vista de producto
-router.get('/', productsController.products);//productos todos
+//router.get('/', productsController.products);//productos todos sql
 router.delete('/:id', productsController.delete); //boton eliminar productos
 
 module.exports = router;
