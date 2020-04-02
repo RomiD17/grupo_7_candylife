@@ -16,9 +16,10 @@ function App() {
         .catch(console.log);
 	  }, []);
 	  
+	  
 	let totalPrice = 0;
 	products.forEach( product => totalPrice = totalPrice + parseInt(product.mainPrecio, 10));
-
+	
     let data=[
       {
         title:'Cantidad de Productos en DB',
@@ -52,7 +53,7 @@ function App() {
 				<div className="container-fluid">
 
 					<div className="d-sm-flex align-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+						<h1 className="h3 mb-0 text-gray-800">Mis métricas</h1>
 					</div>
 
 					<div className="row">
@@ -71,6 +72,8 @@ function App() {
           })
           }
           </div>
+
+		  <Table products={products}/>
 					<div className="row">
 						<div className="col-lg-6 mb-4">
 							<div className="card shadow mb-4">
@@ -90,14 +93,13 @@ function App() {
 						<div className="col-lg-6 mb-4">						
 							<div className="card shadow mb-4">
 								<div className="card-header py-3">
-									<h6 className="m-0 font-weight-bold text-primary">Categories in Data Base</h6>
+									<h6 className="m-0 font-weight-bold text-primary">Marcas en la base de datos</h6>
 								</div>
 								<div className="card-body">
 									<div className="row">
 										<div className="col-lg-6 mb-4">
 											<div className="card bg-info text-white shadow">
 												<div className="card-body">
-													Category 01
 												</div>
 											</div>
 										</div>
@@ -141,7 +143,6 @@ function App() {
 							</div>
 						</div>
 					</div>
-					<Table products={products}/>
 				</div>
 			</div>
 				
