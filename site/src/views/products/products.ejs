@@ -41,11 +41,14 @@
                 </div>
                 <% } else { %>  <% } %>
             </div>
+            <% if(!isAuthenticated) { %>
+            <!--boton comprar-->
             <a href="/products/<%= unProducto.id %>">
               <div class="over">
                 <div class="btn-comprar">comprar</div>
               </div>
             </a>
+            <% } else { %>  <% } %>
             </div>
             
           <% }) %>

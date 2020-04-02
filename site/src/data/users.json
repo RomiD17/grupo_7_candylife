@@ -42,13 +42,14 @@
   "src": "user-1585696293313.jpg"
  },
  {
-  "id": 5,
   "name": "Adele",
-  "lastname": "ri",
+  "lastname": "rios",
   "address": "av suipacha 333",
   "email": "adele@gmail.com",
-  "password": "$2b$10$Xo5b0DqNEgJMQlJ9xUHj1O0upcp.1tiM3Mmxo1yFX9HY9wMnTBIEG",
+  "password": "$2b$10$ki6Mq5H4kMwLQkA312KPx.NrZjneuCp6N7DgWPxR/bh3sVULpeT2O",
   "rePassword": "12121212",
+  "oldImage": "user-1585767782901.jpg",
+  "id": "5",
   "src": "user-1585767782901.jpg"
  },
  {
@@ -77,8 +78,17 @@
   "lastname": "lopez",
   "address": "calle 123",
   "email": "carla@gmail.com",
-  "password": "$2b$10$892J.wb2KVzZA7XxC6JYWu5TqvM87WmUAqQCreqoU2aCWL9WVQGzK",
   "rePassword": "123123123",
   "src": "user-1585804899029.jpg"
+ },
+ {
+  "id": 9,
+  "name": "romina",
+  "lastname": "duarte",
+  "address": "calle 1234",
+  "email": "romi@gmail.com",
+  "password": "$2b$10$Jtbg.dJdyYud9P7WLEhn7ejFfZzk6ff7oAJ7PUKH2Z86V7G3R3i86",
+  "rePassword": "12345678",
+  "src": "user-1585857353577.jpg"
  }
 ]

@@ -40,17 +40,11 @@ function updateProd(item) {
 const productsControllers = {
 	//listado de productos
 	index: (req, res) => {
-		sequelize
-			.query('SELECT * FROM products')
-			.then( results => {
-				//return res.send(results)
-				return res.render('products/products', { products: results[0] });
-			})
-			.catch(error => console.log(error));
+		return res.render('products/products', { products });
 	},
 	productDetail: (req, res) => {
-		let product = findProd(req.params.id)
-		res.render('products/productDetail', { product});
+			let product = findProd(req.params.id)
+			return res.render('products/productDetail', { product });
 	},
 	productsjson: (req, res) => {
 		res.json(products)

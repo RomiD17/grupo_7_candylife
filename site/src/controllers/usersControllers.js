@@ -157,6 +157,7 @@ const usersControllers = {
 	edit: (req, res)=>{
 		//res.send('editar')
 		let users =	getUserById(req.params.id);
+		console.log(users)
 		res.render('users/userEdit', { users });
 	},
 	update: (req, res ) => {
