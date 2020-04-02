@@ -2,6 +2,7 @@
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require("path");
+const { check, validationResult, body } = require('express-validator');
 
 //ubicacion del archivo
 const userFilePath = path.join(__dirname, '../data/users.json');
@@ -75,29 +76,41 @@ function destroyUser(id) {
 
 //CONTROLLERS//
 const usersControllers = {
-    register: (req, res) => {
+  register: (req, res) => {
 		res.render('users/register');
 	},
 	store: (req, res) => {
-		req.body.src = req.file ? req.file.filename : '';
-		req.body.password = bcrypt.hashSync(req.body.password, 10);
-		let arrayUsers = [];
-		if (usersFileContent != '') {
-			arrayUsers = users
-	}
-	req.body = {
-		id: arrayUsers.length + 1,
-		...req.body
-		};
-		arrayUsers.push(req.body);
-		let saveUsers = JSON.stringify(arrayUsers, null, ' ');
-    fs.writeFileSync(userFilePath, saveUsers);
-    res.redirect('login');
+		let errors = validationResult(req);
+
+    if(errors.isEmpty()){
+			req.body.src = req.file ? req.file.filename : '';
+			req.body.password = bcrypt.hashSync(req.body.password, 10);
+			let arrayUsers = [];
+			if (usersFileContent != '') {
+				arrayUsers = users
+			}
+			req.body = {
+				id: arrayUsers.length + 1,
+				...req.body
+			};
+			arrayUsers.push(req.body);
+			let saveUsers = JSON.stringify(arrayUsers, null, ' ');
+			fs.writeFileSync(userFilePath, saveUsers);
+			return res.redirect('loginSuccess');
+		} else {
+			return res.render('users/register', { errors: errors.errors });
+		}
 	},
 	loginForm: (req, res) => {
-		res.render('users/login');
-	},
+			res.render('users/login');
+		},
+	loginFormSuccess: (req, res) => {
+			res.render('users/loginSuccess');
+		},
 	processLogin: (req, res) => {
+		let errors = validationResult(req);
+
+    if(errors.isEmpty()){
 		// Buscar usuario por email
 		let user = getUserByEmail(req.body.email);
 		
@@ -115,29 +128,30 @@ const usersControllers = {
 				// Redireccionamos al visitante a su perfil
 				return	res.redirect('/users/profile');
 			} else {
-					res.render('users/404', { 
-							message: {
-									class: 'error-message',
-									title: 'Inválido',
-									desc: 'Los datos de acceso son inválidos.'
-									}
-							});
-						}
-				} else {
-						res.render('users/404', { 
-								message: {
-										class: 'error-message',
-										title: 'Inexistente',
-										desc: 'El usuario que buscas ya no existe, nunca existió y tal vez nunca exista.'
-								}
+					res.render('users/login', {						
+						errors: [{
+						location: "body",
+						msg: "El password es incorrecto",
+						param: "password"
+					}] 
 						});
-				}       
+					}
+			} else {
+						res.render('users/login', { 
+							errors: [{
+								location: "body",
+								msg: "El usuario que buscas no existe.",
+								param: "email"
+							}]
+						});
+				}    
+			}   
 			},
-		logout: (req, res) => {
-			req.session.destroy();
-			// Destruir la cookie
-			res.cookie('userCookie', null, { maxAge: 1 });
-			res.redirect('/');
+	logout: (req, res) => {
+		req.session.destroy();
+		// Destruir la cookie
+		res.cookie('userCookie', null, { maxAge: 1 });
+		res.redirect('/');
     },
 	edit: (req, res)=>{
 		//res.send('editar')

@@ -1,52 +1,71 @@
+<% if (typeof errors != 'undefined'){ %>
+	<div class="alert alert-danger" role="alert">
+		<ul>
+			<% for (var i = 0; i< errors.length ; i++ ){ %>
+				<li class="errors-back"><%= errors[i].msg  %></li>
+			<% } %>   
+		</ul>
+	</div>
+	<% } %>
 <div class="row">
-    <div class="columna4">
-        <div>
+    <div class="col-md-4 col-sm-10">
+        <div class="form-group">
             <label>Nombre del producto:</label>
-            <input type="text" name="prodNombre" value="<%= locals.product ? product.prodNombre : '' %>">
-        </div>
-        <div>
+            <input data-name="nombre" type="text" name="prodNombre" value="<%= locals.product ? product.prodNombre : '' %>">
+						<div class="invalid-feedback"> </div>
+				</div>
+        <div class="form-group">
             <label>Marca del producto:</label>
-            <input type="text" name="marca" value="<%= locals.product ? product.marca : '' %>">
-        </div>
-        <div>
+            <input data-name="marca" type="text" name="marca" value="<%= locals.product ? product.marca : '' %>">
+						<div class="invalid-feedback"> </div>
+				</div>
+        <div class="form-group">
             <label>Categoría del producto:</label>
-            <input type="text" name="categoria" value="<%= locals.product ? product.categoria : '' %>">
+            <input data-name="categoria" type="text" name="categoria" value="<%= locals.product ? product.categoria : '' %>">
+						<div class="invalid-feedback"> </div>
+				</div>
+
+        <div class="form-group">
+            <label>Gramaje/Kgs:</label>
+						<input data-name="gramaje"  type="number" name="gramaje" value="<%= locals.product ? product.gramaje : '' %>">
+						<div class="invalid-feedback"> </div>
+				</div>
+        <div class="form-group">
+            <label>Precio del producto:</label>
+            <input data-name="precio" type="text" name="mainPrecio" value="<%= locals.product ? product.mainPrecio : '' %>" >
+						<div class="invalid-feedback"> </div>
+				</div>
+
+        <div class="form-group">
+            <label>Precio promocional:</label>
+						<input data-name="precio promocional" type="number" name="discountPrecio" value="<%= locals.product ? product.discountPrecio : '' %>">
+						<div class="invalid-feedback"> </div>
         </div>
-        <div>
-            <label>Tamaño/gramaje/Kgs:</label>
-            <input type="number" name="gramaje" value="<%= locals.product ? product.gramaje : '' %>">
-        </div>
-            <div>
-                <label>Precio del producto:</label>
-                <input type="text" name="mainPrecio" value="<%= locals.product ? product.mainPrecio : '' %>" >
-            </div>
-            <div>
-                <label>Precio promocional:</label>
-                <input type="number" name="discountPrecio" value="<%= locals.product ? product.discountPrecio : '' %>">
-            </div>
     </div>
-    <div class="columna5">
-        <div>
+    <div class="col-md-8 col-sm-10 my-0">
+        <div class="form-group">
             <label>Detalle del producto:</label>
-            <textarea rows="4" cols="50" name="detalle"> <%= locals.product ? product.detalle : '' %></textarea>
-        </div>
-        <div>
+            <textarea data-name="detalle" rows="6" cols="50" name="detalle"> <%= locals.product ? product.detalle : '' %></textarea> 
+						<div class="invalid-feedback"> </div>
+				</div>
+        <div class="form-group">
             <label>Informacion nutricional:</label>
-            <textarea rows="4" cols="50" name="nutricional"> <%= locals.product ? product.detalle : '' %></textarea>
+						<textarea data-name="informacion nutricional" rows="6" cols="50" name="nutricional"> <%= locals.product ? product.nutricional : '' %></textarea>
+						<div class="invalid-feedback"> </div>
         </div>
         
-        <div class="image">
-                <% if (locals.product) { %>
-                    <img class="columna5" src="/images/products/<%= product.src ? product.src : 'default-product-image.png' %>" alt="">
-                    <input type="hidden" name="oldImage" value="<%= product.src %>">
-                <% } %>
-                </div>
-        <div>
+        <div class="form-group image">
+						<% if (locals.product) { %>
+								<img class="columna5" src="/images/products/<%= product.src ? product.src : 'default-product-image.png' %>" alt="">
+								<input type="hidden" name="oldImage" value="<%= product.src %>">
+						<% } %>
+						</div>
+        <div class="form-group">
             <label>Adjuntar imagenes:</label>
-            <input type="file" name="src" multiple>
-        </div>
+            <input type="file" name="src" accept="image/x-png,image/gif,image/jpeg, image/jpg" data-name="Imagen" multiple>
+						<div class="invalid-feedback"> </div>
+				</div>
     </div>
-
 </div>
     
     

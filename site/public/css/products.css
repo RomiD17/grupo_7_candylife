@@ -1,56 +1,8 @@
 /* grilla*/
-.container{
-    padding: 2.5%;
-    position: relative;
-  }
-  .container-fluid{
-    margin: 0!important;
-    padding: 0!important;
-  }
-  .columna1{
-    width:10%;
-    display: inline-block;
-  }
-  .columna2{
-    width:20%;
-    display: inline-block;
-  }
-  .columna3{
-    width:30%;
-    display: inline-block;
-  }
-  .columna4{
-    width:40%;
-    display: inline-block;
-  }
-  .columna5{
-    width:50%;
-    display: inline-block;
-  }
-  .columna6{
-    width:60%;
-    display: inline-block;
-  }
-  .columna7{
-    width:70%;
-    display: inline-block;
-  }
-  .columna8{
-    width:80%;
-    display: inline-block;
-  }
-  .columna9{
-    width:90%;
-    display: inline-block;
-  }
-  .columna{
-    width:100%;
-    display: inline-block;
-  }
-  
+
 /*banner*/
 #banner{
-    margin-top:125px;
+    margin-top:145px;
     margin-bottom: 50px;
     position: relative;
 }
@@ -96,21 +48,14 @@
 
 /*Home Productos*/
 
-.row{
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-flow: wrap;
-}
+
 .prod{
     text-align: center;
     margin-top:20px;
    
 }
 .prod img{
-    max-width:250px;
+    height:250px;
 }
 .prod-nombre{
     font-size: 20px;
@@ -161,67 +106,13 @@
     transition: .2s;
     transform: translateY(1em);
 }
-/* grilla*/
-.container{
-  padding: 2.5%;
-  position: relative;
+.btn-principal .fa-plus{
+  color: #ffffff;
 }
-.container-fluid{
-  margin: 0!important;
-  padding: 0!important;
-}
-.columna1{
-  width:10%;
-  display: inline-block;
-}
-.columna2{
-  width:20%;
-  display: inline-block;
-}
-.columna3{
-  width:30%;
-  display: inline-block;
-}
-.columna4{
-  width:40%;
-  display: inline-block;
-}
-.columna5{
-  width:50%;
-  display: inline-block;
-}
-.columna6{
-  width:60%;
-  display: inline-block;
-}
-.columna7{
-  width:70%;
-  display: inline-block;
-}
-.columna8{
-  width:80%;
-  display: inline-block;
-}
-.columna9{
-  width:90%;
-  display: inline-block;
-}
-.columna{
-  width:100%;
-  display: inline-block;
 
-  margin: 15px 0;
-}
-.row{
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
  /*contenido*/
  #listing{
-  padding-top: 130px;
+  padding-top: 150px;
  }
  .buscador h3{
   font-weight: 400;

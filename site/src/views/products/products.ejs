@@ -8,44 +8,48 @@
   <%- include('../partials/header')%>
   
   <section id="listing">
-  <div class="container">
+  <div class="container my-4">
     <div class="breadcum">
       <a href="/"><i class="fas fa-home"></i></a>
        <a href="/products"> Listado de Productos <i class="fas fa-angle-right"></i></a>
     </div>
 </div>
   </section>
-  <section id="productos">
+  <section class="container-fluid" id="productos">
+    <div class="container">
+        <% if(isAuthenticated) { %>
+      <a class="btn-principal mr-auto" href="/products/productAdd"><i class="fas fa-plus"></i> Nuevo Producto </a>
+      <% } else { %>  <% } %>
       <div class="row">
           <% products.forEach(unProducto => { %>
-            <div class="prod-wrap columna3">
-              <div class="columna prod">
+            <div class="prod-wrap col-md-4">
+              <div class="col-md-12 prod">
                   <% if(unProducto.src.includes('http')){ %>
-                    <img src="<%= unProducto.src %> " > 
+                    <img class="img-fluid" src="<%= unProducto.src %> " > 
                     <%} else { %>
-                     <img src="/images/products/<%= unProducto.src %>" />
+                     <img class="img-fluid" src="/images/products/<%= unProducto.src %>" />
                     <% } %> 
                 <p class="prod-nombre"> <%= unProducto.prodNombre %> </p>
                 <p class="main-precio">$ <%= unProducto.mainPrecio %> </p>
-                <div class="row">
-                <form action="/products/<%= unProducto.id %>?_method=DELETE" method="POST">
-                  <button class="btn-secundario" type="submit">Borrar</button>
-                </form>
-                <a class="btn-principal" href="/products/<%= unProducto.id %>/edit">editar</a>
-              </div>
+                <% if(isAuthenticated) { %>
+                <div class="row m-auto">
+                  <form action="/products/<%= unProducto.id %>?_method=DELETE" method="POST">
+                    <button class="btn-secundario mr-3" type="submit">Borrar</button>
+                  </form>
+                  <a class="btn-principal" href="/products/<%= unProducto.id %>/edit">editar</a>
+                </div>
+                <% } else { %>  <% } %>
             </div>
             </div>
             
           <% }) %>
       </div>
         <!--segunda fila de productos-->
-      
+      </div>
   </div>
   </section>
-  <%- include('../partials/redes')%>
-  <%- include('../partials/footer')%>
-	
-</div>
+<%- include('../partials/redes')%>
+<%- include('../partials/footer')%>
 <%- include('../partials/scripts') %>
 </body>
 </html>

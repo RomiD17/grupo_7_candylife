@@ -1,6 +1,7 @@
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const path = require("path");
+const { check, validationResult, body } = require('express-validator');
 
 //direccion de porductos
 const ubicacionProductosJSON = path.join(__dirname, '../data/products.json');
@@ -50,8 +51,11 @@ const productsControllers = {
 	productAdd: (req, res) => {
 		res.render('products/productAdd');
 	},
-	store: (req, res) => {
-		let arrayDeProductos = [];
+	store: (req, res) => {	
+		let errors = validationResult(req);
+
+		if(errors.isEmpty()){
+			let arrayDeProductos = [];
 		if (contenidoProductosJSON != '') {
 			arrayDeProductos = products
 		}
@@ -64,9 +68,12 @@ const productsControllers = {
 		let contenidoAGuardar = JSON.stringify(arrayDeProductos, null, ' ');
 		fs.writeFileSync(ubicacionProductosJSON, contenidoAGuardar);
 		res.redirect('success');
+	} else {
+		res.render('products/productAdd', { errors: errors.errors })
+	}
 	},
 	success: (req, res) => {
-		res.render('success');
+		res.render('products/success');
 	},
 	edit: (req, res) => {
 		let product = findProd(req.params.id)

@@ -4,37 +4,13 @@
   "marca": "tincidunt eget tempus",
   "categoria": "caramelo",
   "gramaje": "100",
-  "mainPrecio": "$8.72",
+  "mainPrecio": "8.72",
   "discountPrecio": "",
-  "detalle": " Nullam varius.",
-  "nutricional": " Nullam varius.",
+  "detalle": "  Nullam varius.",
+  "nutricional": "  Nullam varius.",
   "oldImage": "http://dummyimage.com/106x183.png/ff4444/ffffff",
   "id": "5",
   "src": "http://dummyimage.com/106x183.png/ff4444/ffffff"
- },
- {
-  "id": 6,
-  "prodNombre": "vel enim",
-  "mainPrecio": "$9.96",
-  "Categoria": "a",
-  "marca": "posuere",
-  "detalle": "Praesent id massa id nisl venenatis lacinia.",
-  "nutricional": 29,
-  "gramaje": 88,
-  "discountPrecio": "$7.27",
-  "src": "http://dummyimage.com/122x227.bmp/cc0000/ffffff"
- },
- {
-  "id": 8,
-  "prodNombre": "Pico dulce",
-  "marca": "Lheritier",
-  "categoria": "chupetines",
-  "detalle": "El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
-  "nutricional": "120 cal",
-  "gramaje": "34",
-  "mainPrecio": "400",
-  "discountPrecio": "360",
-  "src": "pico-dulce.jpg"
  },
  {
   "id": 9,
@@ -60,5 +36,30 @@
   "oldImage": "pico-dulce.jpg",
   "id": "10",
   "src": "pico-dulce.jpg"
+ },
+ {
+  "id": 12,
+  "prodNombre": "mantecol",
+  "marca": "georgalo",
+  "categoria": "turron",
+  "gramaje": "24",
+  "mainPrecio": "200",
+  "discountPrecio": "150",
+  "detalle": " este producto es especial para las fiestas",
+  "nutricional": " posee grasas saturadas",
+  "src": "avatar-2.jpg"
+ },
+ {
+  "prodNombre": "nisi nam",
+  "marca": "tincidunt eget tempus",
+  "categoria": "caramelo",
+  "gramaje": "100",
+  "mainPrecio": "8.72",
+  "discountPrecio": "",
+  "detalle": "  Nullam varius.",
+  "nutricional": "  Nullam varius.",
+  "oldImage": "http://dummyimage.com/106x183.png/ff4444/ffffff",
+  "id": "5",
+  "src": "http://dummyimage.com/106x183.png/ff4444/ffffff"
  }
 ]

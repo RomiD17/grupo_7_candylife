@@ -1,5 +1,14 @@
 <div>
   <div>
+      <% if (typeof errors != 'undefined'){ %>
+        <div class="alert alert-danger" role="alert">
+          <ul>
+            <% for (var i = 0; i< errors.length ; i++ ){ %>
+             <li class="errors-back"><%= errors[i].msg  %></li>
+            <% } %>   
+          </ul>
+          </div>
+          <% } %>
     <label> Nombre <small class="requerido" >*</small></label>
     <input type="text" name="name" class="form-control " placeholder="Ingrese su nombre" data-name="nombre" value="<%= locals.users ? users.name : '' %>">
     <div class="invalid-feedback"> </div>
@@ -32,7 +41,7 @@
     <label class="login label" for="login-pass"> Confirmar contraseña
     <small class="requerido" >*</small>
     </label>
-    <input type="password" name="rePassword" class="form-control address" placeholder="Repita la contraseña" data-name="avatar">
+    <input type="password" name="rePassword" class="form-control address" placeholder="Repita la contraseña" data-name="confirmar password" value="<%= locals.users ? users.rePassword : '' %>">
     <div class="invalid-feedback"> </div>
   </div>
   <div>
@@ -43,7 +52,7 @@
           <input type="hidden" name="oldImage" value="<%= users.src %>">
       <% } %>
       </div>
-    <input type="file" name="src" data-name="imagen" multiple>
+    <input type="file" name="src" accept="image/x-png,image/gif,image/jpeg, image/jpg" data-name="Avatar" >
     <div class="invalid-feedback"> </div>
   </div>
 </div>

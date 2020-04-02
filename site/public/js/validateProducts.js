@@ -20,7 +20,7 @@ function validateInput(message, input, typeOfValidator) {
 			validation = !validator[typeOfValidator](valorDelCampo);
 			break;
 		case 'isLength':
-			validation = !validator[typeOfValidator](valorDelCampo, {min:8});
+			validation = !validator[typeOfValidator](valorDelCampo,);
 			break;
 		// case 'equals':
 		// 	validation = !validator[typeOfValidator](valorDelCampo) ;

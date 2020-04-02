@@ -40,5 +40,35 @@
   "oldImage": "user-1585696293313.jpg",
   "id": "4",
   "src": "user-1585696293313.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Adele",
+  "lastname": "ri",
+  "address": "av suipacha 333",
+  "email": "adele@gmail.com",
+  "password": "$2b$10$Xo5b0DqNEgJMQlJ9xUHj1O0upcp.1tiM3Mmxo1yFX9HY9wMnTBIEG",
+  "rePassword": "12121212",
+  "src": "user-1585767782901.jpg"
+ },
+ {
+  "id": 6,
+  "name": "prueba",
+  "lastname": "uno",
+  "address": "lavalle 4567",
+  "email": "prueba@gmail.com",
+  "password": "$2b$10$xGXa.m222e7/X.nEqiVJleo.JKdonQDzCAc5JI5PzEyvT/80w0dg2",
+  "rePassword": "12345678",
+  "src": "user-1585785331372.jpg"
+ },
+ {
+  "id": 7,
+  "name": "prueba",
+  "lastname": "uno",
+  "address": "lavalle 4567",
+  "email": "prueba@gmail.com",
+  "password": "$2b$10$pCA4bttJ/y2mkL073/jGa.WkfOPdMA9WuQY92PwliA3KRZy0HgmrG",
+  "rePassword": "12345678",
+  "src": "user-1585785366493.jpg"
  }
 ]

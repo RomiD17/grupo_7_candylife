@@ -3,10 +3,7 @@
     padding: 2.5%;
     position: relative;
   }
-  .container-fluid{
-    margin: 0!important;
-    padding: 0!important;
-  }
+
   .columna1{
     width:10%;
     display: inline-block;

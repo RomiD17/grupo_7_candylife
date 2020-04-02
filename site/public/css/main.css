@@ -13,9 +13,13 @@ a:hover{
 
 /* uso de la fuente 
 font-family: 'Roboto', sans-serif; */
-
+html {
+  min-height: 100%;
+  position: relative;
+}
 body {
-  margin: 0;
+  margin: 0!important;
+  margin-bottom: 250px!important;
   font-family: sans-serif;
 }
 a{
@@ -115,7 +119,11 @@ header{
 
 /*footer*/
 footer{
+  bottom: 0;
+  height: 250px;
   background-color: #80E5D2;
+  position: absolute;
+  width: 100%;
 }
 footer img{
   vertical-align: super;
@@ -243,6 +251,13 @@ footer a, footer i{
   text-transform: uppercase;
   cursor: pointer;
 }
+.btn-principal:hover{
+  color: #ffffff!important;
+}
+
+.btn-secundario:hover{
+  color: #FF6080!important;
+}
 .btn-nav-login{
   border-radius: 60px;
   padding: 10px;
@@ -274,14 +289,14 @@ footer a, footer i{
   background-color: #ffffff!important;
   border-radius: 50px!important;
 }
-.row{
+/* .row{
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: start;
   flex-flow: wrap;
-}
+} */
 .wrap{
   display: flex;
   flex-direction: row;
