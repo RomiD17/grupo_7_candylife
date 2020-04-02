@@ -25,26 +25,14 @@
   "src": "marroc.jpg"
  },
  {
-  "id": 7,
-  "prodNombre": "Chupetin Pico Dulce",
-  "marca": "Arcor",
-  "categoria": "Chupetin",
-  "gramaje": "20",
-  "mainPrecio": "22",
-  "discountPrecio": "19",
-  "detalle": " Un ejemplo perfecto para corroborar que \"bien hecho\" no tiene que significar \"alto precio\". El Pico Dulce logró traspasar las barreras generacionales, y gustar a chicos y adolescentes en base a sus múltiples colores, y a un sabor que deambula muy bien en el delicado equilibrio de lo dulce y lo ácido. Muy buena página web.\r\n\r\n",
-  "nutricional": " 1",
-  "src": "4.jpg"
- },
- {
   "id": 8,
-  "prodNombre": "Caramelo Flynn Paff Bolsa x40",
+  "prodNombre": "Chupetin Flynn Paff Bolsa x40",
   "marca": "Georgalos",
-  "categoria": "Caramelo",
+  "categoria": "Chupetin",
   "gramaje": "30",
   "mainPrecio": "199",
   "discountPrecio": "179",
-  "detalle": "El mejor caramelo de la infancia ",
+  "detalle": "El mejor chupetin de la infancia ",
   "nutricional": "7 ",
   "src": "1.png"
  },
@@ -131,5 +119,65 @@
   "detalle": " el amntecol para las fiestas es lo mwjor",
   "nutricional": "grasas natirales, bueno para compartir ",
   "src": "prod-1585806871557.jpg"
- }
+ },
+ {
+  "id": 12,
+  "prodNombre": "Chocolate Vauquita",
+  "marca": "Vauquita",
+  "categoria": "Chocholate",
+  "gramaje": "20",
+  "mainPrecio": "55",
+  "discountPrecio": "49",
+  "detalle": "El tradicional relleno de dulce de leche lo hace incomparable. ",
+  "nutricional": "8 ",
+  "src": "prod-1585812583285.jpg"
+ },
+ {
+  "id": 13,
+  "prodNombre": "Chocolate Milka Leger",
+  "marca": "Milka",
+  "categoria": "Chocolate",
+  "gramaje": "489",
+  "mainPrecio": "489",
+  "discountPrecio": "477",
+  "detalle": " No hay nada mejor que un Milka para compartir.",
+  "nutricional": " 100",
+  "src": "prod-1585812642910.jpeg"
+ },
+ {
+  "id": 14,
+  "prodNombre": "Caramelos Sugus Masticables",
+  "marca": "Sugus",
+  "categoria": "Caramelos",
+  "gramaje": "550",
+  "mainPrecio": "488",
+  "discountPrecio": "476",
+  "detalle": "Bolsa de caramelos Sugus. No vas a dejar ni el de menta. ",
+  "nutricional": "78 ",
+  "src": "prod-1585812688026.jpg"
+ },
+ {
+  "id": 15,
+  "prodNombre": "Chicle Beldent Menta",
+  "marca": "Arcor",
+  "categoria": "Chicle",
+  "gramaje": "9",
+  "mainPrecio": "29",
+  "discountPrecio": "26",
+  "detalle": "El clasico chicle de menta a un precio especial ",
+  "nutricional": "10 ",
+  "src": "prod-1585812786701.jpeg"
+ },
+ {
+    "id": 7,
+    "prodNombre": "Chupetin Pico Dulce",
+    "marca": "Arcor",
+    "categoria": "Chupetin",
+    "gramaje": "20",
+    "mainPrecio": "22",
+    "discountPrecio": "19",
+    "detalle": " Un ejemplo perfecto para corroborar que \"bien hecho\" no tiene que significar \"alto precio\". El Pico Dulce logró traspasar las barreras generacionales, y gustar a chicos y adolescentes en base a sus múltiples colores, y a un sabor que deambula muy bien en el delicado equilibrio de lo dulce y lo ácido. Muy buena página web.\r\n\r\n",
+    "nutricional": " 1",
+    "src": "4.jpg"
+   }
 ]
