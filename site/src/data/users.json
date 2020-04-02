@@ -80,5 +80,15 @@
   "password": "$2b$10$892J.wb2KVzZA7XxC6JYWu5TqvM87WmUAqQCreqoU2aCWL9WVQGzK",
   "rePassword": "123123123",
   "src": "user-1585804899029.jpg"
+ },
+ {
+  "id": 9,
+  "name": "andres",
+  "lastname": "garcia",
+  "address": "agarcia@gmail.com",
+  "email": "agarcia@gmail.com",
+  "password": "$2b$10$duF/OuQAwlGUBaMkrJKExelEU6FTRtK8v9FsJJnO1ySAAYmU2bWge",
+  "rePassword": "12345678",
+  "src": "user-1585853350146.jpeg"
  }
 ]

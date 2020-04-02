@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Sidebar from './components/Sidebar';
 import Nav from './components/Nav';
 import Metric from './components/Metric';
@@ -6,6 +6,18 @@ import Table from './components/Table';
 
 
 function App() {
+	const [products, setProducts] = useState([]) //array de 2 elementos: el dato (producto) y el metodo q modifica el dato tipo upd
+    useEffect(() => {
+        fetch("http://localhost:3000/products/api") //llamada asíncrona
+        .then(res => res.json())
+        .then(resobject => {
+                setProducts(resobject);
+            } )
+        .catch(console.log);
+	  }, []);
+	  
+	let totalPrice = 0;
+	products.forEach( product => totalPrice = totalPrice + parseInt(product.mainPrecio, 10));
 
     let data=[
       {
@@ -13,14 +25,14 @@ function App() {
         color:'border-left-primary',
         textcolor:'text-primary',
         icon:'fas fa-clipboard-list fa-2x text-gray-300',
-        quantity:'135'
+        quantity: products.length
       },
       {
         title:'Suma Importe Total Productos',
         color:'border-left-success',
         textcolor:'text-success',
         icon:'fas fa-dollar-sign fa-2x text-gray-300',
-        quantity:'$546.456',
+        quantity: totalPrice,
       },
       {
         title:'Cantidad de usuarios',
@@ -52,7 +64,8 @@ function App() {
               color={info.color}
               textcolor={info.textcolor}
               icon={info.icon}
-              quantity={info.quantity} 
+			  quantity={info.quantity} 
+			  products={products}
             />
             )
           })
@@ -128,7 +141,7 @@ function App() {
 							</div>
 						</div>
 					</div>
-					<Table/>
+					<Table products={products}/>
 				</div>
 			</div>
 				

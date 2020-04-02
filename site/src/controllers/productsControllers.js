@@ -53,7 +53,12 @@ const productsControllers = {
 		res.render('products/productDetail', { product});
 	},
 	productsjson: (req, res) => {
-		res.json(products)
+		sequelize
+			.query('SELECT * FROM products')
+			.then( results => {
+				return res.json( results[0] );
+			})
+			.catch(error => console.log(error));
 	},
 
 	productCart: (req, res) => {
