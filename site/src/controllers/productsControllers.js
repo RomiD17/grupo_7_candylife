@@ -55,6 +55,8 @@ const productsControllers = {
 		let errors = validationResult(req);
 
 		if(errors.isEmpty()){
+      req.body.src = req.file ? req.file.filename : '';
+
 			let arrayDeProductos = [];
 		if (contenidoProductosJSON != '') {
 			arrayDeProductos = products
@@ -63,13 +65,12 @@ const productsControllers = {
 			id: arrayDeProductos.length + 1,
 			...req.body
 		};
-
 		arrayDeProductos.push(req.body);
 		let contenidoAGuardar = JSON.stringify(arrayDeProductos, null, ' ');
 		fs.writeFileSync(ubicacionProductosJSON, contenidoAGuardar);
-		res.redirect('success');
+	  return	res.redirect('success');
 	} else {
-		res.render('products/productAdd', { errors: errors.errors })
+	  return	res.render('products/productAdd', { errors: errors.errors })
 	}
 	},
 	success: (req, res) => {

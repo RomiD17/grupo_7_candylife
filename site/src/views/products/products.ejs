@@ -31,6 +31,7 @@
                     <% } %> 
                 <p class="prod-nombre"> <%= unProducto.prodNombre %> </p>
                 <p class="main-precio">$ <%= unProducto.mainPrecio %> </p>
+
                 <% if(isAuthenticated) { %>
                 <div class="row m-auto">
                   <form action="/products/<%= unProducto.id %>?_method=DELETE" method="POST">
@@ -40,6 +41,11 @@
                 </div>
                 <% } else { %>  <% } %>
             </div>
+            <a href="/products/<%= unProducto.id %>">
+              <div class="over">
+                <div class="btn-comprar">comprar</div>
+              </div>
+            </a>
             </div>
             
           <% }) %>

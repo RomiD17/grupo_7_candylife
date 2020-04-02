@@ -84,6 +84,7 @@ const usersControllers = {
 
     if(errors.isEmpty()){
 			req.body.src = req.file ? req.file.filename : '';
+			console.log(req.file)
 			req.body.password = bcrypt.hashSync(req.body.password, 10);
 			let arrayUsers = [];
 			if (usersFileContent != '') {

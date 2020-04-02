@@ -70,5 +70,15 @@
   "password": "$2b$10$pCA4bttJ/y2mkL073/jGa.WkfOPdMA9WuQY92PwliA3KRZy0HgmrG",
   "rePassword": "12345678",
   "src": "user-1585785366493.jpg"
+ },
+ {
+  "id": 8,
+  "name": "carla",
+  "lastname": "lopez",
+  "address": "calle 123",
+  "email": "carla@gmail.com",
+  "password": "$2b$10$892J.wb2KVzZA7XxC6JYWu5TqvM87WmUAqQCreqoU2aCWL9WVQGzK",
+  "rePassword": "123123123",
+  "src": "user-1585804899029.jpg"
  }
 ]
