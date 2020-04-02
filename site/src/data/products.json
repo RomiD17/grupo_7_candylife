@@ -155,5 +155,29 @@
   "detalle": "El clasico chicle de menta a un precio especial ",
   "nutricional": "10 ",
   "src": "prod-1585812786701.jpeg"
+ },
+ {
+  "id": 7,
+  "prodNombre": "Chupetin Pico Dulce",
+  "marca": "Arcor",
+  "categoria": "Chupetin",
+  "gramaje": "20",
+  "mainPrecio": "22",
+  "discountPrecio": "19",
+  "detalle": " Un ejemplo perfecto para corroborar que \"bien hecho\" no tiene que significar \"alto precio\". El Pico Dulce logró traspasar las barreras generacionales, y gustar a chicos y adolescentes en base a sus múltiples colores, y a un sabor que deambula muy bien en el delicado equilibrio de lo dulce y lo ácido. Muy buena página web.\r\n\r\n",
+  "nutricional": " 1",
+  "src": "4.jpg"
+ },
+ {
+  "id": 16,
+  "prodNombre": "Chocolate Fel Fort",
+  "marca": "Fel Fort",
+  "categoria": "Chocolate",
+  "gramaje": "200",
+  "mainPrecio": "45",
+  "discountPrecio": "40",
+  "detalle": " Chocolate de Ricky Fort",
+  "nutricional": "0 ",
+  "src": "prod-1585839273828.jpeg"
  }
 ]

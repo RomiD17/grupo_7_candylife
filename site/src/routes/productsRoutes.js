@@ -36,6 +36,7 @@ router.get('/success', productsController.success);// guarda producto
 router.get('/:id/edit',upload.single('src'),validateProduct, productsController.edit);// formulario editar
 router.put('/:id', upload.single('src'), validateProduct, productsController.update);// actualizacion
 router.get('/productCart', productsController.productCart);//carrito de compras
+router.get('/api', productsController.productsjson);//productos todos solo el json
 router.get('/:id', productsController.productDetail);// vista de producto
 //router.get('/', productsController.products);//productos todos sql
 router.delete('/:id', productsController.delete); //boton eliminar productos
