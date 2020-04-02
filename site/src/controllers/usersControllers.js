@@ -114,6 +114,8 @@ const usersControllers = {
     if(errors.isEmpty()){
 		// Buscar usuario por email
 		let user = getUserByEmail(req.body.email);
+	
+	//	console.log(req.body.password, user.password)
 		
 		if (user) {
 			if (bcrypt.compareSync(req.body.password, user.password)) {
