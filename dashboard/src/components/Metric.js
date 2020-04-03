@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 
 function Metric(props){
-  console.log(props)
   return(
     <div className="col-md-4 mb-4">
       <div className={`card ${props.color} shadow h-100 py-2`}>

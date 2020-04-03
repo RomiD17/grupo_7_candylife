@@ -32,16 +32,17 @@
     <div class="invalid-feedback"> </div>
   </div>
   <div>
-    <label > Contraseña <small class="requerido" >*</small>
+    <label class="login label" for="login-pass"> Contraseña
+    <small class="requerido" >*</small>
     </label>
-    <input type="password" name="password" class="form-control address" placeholder="Repita la contraseña" data-name="password" value="<%= locals.users ? users.password : '' %>">
+    <input type="password" name="password" class="form-control address" placeholder="Ingrese la contraseña" data-name="password" value="<%= locals.users ? users.password : '' %>" />
     <div class="invalid-feedback"> </div>
   </div>
   <div>
     <label class="login label" for="login-pass"> Confirmar contraseña
     <small class="requerido" >*</small>
     </label>
-    <input type="password" name="rePassword" class="form-control address" placeholder="Repita la contraseña" data-name="confirmar password" value="<%= locals.users ? users.rePassword : '' %>">
+    <input type="password" name="rePassword" class="form-control address" placeholder="Repita la contraseña" data-name="confirmar password" value="<%= locals.users ? users.rePassword : '' %>" />
     <div class="invalid-feedback"> </div>
   </div>
   <div>

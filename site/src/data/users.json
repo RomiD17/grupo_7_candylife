@@ -90,8 +90,8 @@
   "password": "$2b$10$Jtbg.dJdyYud9P7WLEhn7ejFfZzk6ff7oAJ7PUKH2Z86V7G3R3i86",
   "rePassword": "12345678",
   "src": "user-1585857353577.jpg"
-},
-{
+ },
+ {
   "id": 10,
   "name": "andres",
   "lastname": "garcia",
@@ -100,5 +100,26 @@
   "password": "$2b$10$duF/OuQAwlGUBaMkrJKExelEU6FTRtK8v9FsJJnO1ySAAYmU2bWge",
   "rePassword": "12345678",
   "src": "user-1585853350146.jpeg"
+ },
+ {
+  "name": "Juan",
+  "lastname": "Lopez",
+  "address": "calle 123",
+  "email": "juan@gmail.com",
+  "password": "$2b$10$/EMS.rarGicuLsUGeFqnMu3ETENUUEjbLBwCc3t6q5Id3xJfTpB4K",
+  "rePassword": "12345678",
+  "oldImage": "user-1585862434191.jpg",
+  "id": "11",
+  "src": "user-1585867674819.jpg"
+ },
+ {
+  "id": 12,
+  "name": "soledad",
+  "lastname": "perez",
+  "address": "calle 123",
+  "email": "sole@gmail.com",
+  "password": "$2b$10$4.Ktp1uYTZolNvOysKtYjuwkDq.X/atM8hZf6ej0FNt2DsIrw769y",
+  "rePassword": "12345678",
+  "src": "user-1585874284172.jpg"
  }
 ]

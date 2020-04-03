@@ -3,11 +3,11 @@
   "prodNombre": "Chupetin Pico dulce caja por 100",
   "marca": "Lheritier",
   "categoria": "chupetin",
-  "gramaje": "34",
+  "gramaje": "150",
   "mainPrecio": "900",
   "discountPrecio": "360",
-  "detalle": " El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
-  "nutricional": " El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
+  "detalle": "  El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
+  "nutricional": "  El chupetin Pico Dulce de Lheritier es uno de los clásicos argentinos que no pueden faltar en tu kiosco. Su sabor es incomparable y por eso se destaca sobre el resto de las golosinas.",
   "oldImage": "pico-dulce.jpg",
   "id": "2",
   "src": "pico-dulce.jpg"
@@ -157,7 +157,7 @@
   "src": "prod-1585812786701.jpeg"
  },
  {
-  "id": 7,
+  "id": 16,
   "prodNombre": "Chupetin Pico Dulce",
   "marca": "Arcor",
   "categoria": "Chupetin",
@@ -169,7 +169,7 @@
   "src": "4.jpg"
  },
  {
-  "id": 16,
+  "id": 17,
   "prodNombre": "Chocolate Fel Fort",
   "marca": "Fel Fort",
   "categoria": "Chocolate",
@@ -179,5 +179,17 @@
   "detalle": " Chocolate de Ricky Fort",
   "nutricional": "0 ",
   "src": "prod-1585839273828.jpeg"
+ },
+ {
+  "id": 16,
+  "prodNombre": "matecol",
+  "marca": "georgalo",
+  "categoria": "fiesta",
+  "gramaje": "120",
+  "mainPrecio": "150",
+  "discountPrecio": "140",
+  "detalle": " Perfecto para las fiestas y compartir",
+  "nutricional": " grasas trans",
+  "src": "prod-1585874395367.jpg"
  }
 ]

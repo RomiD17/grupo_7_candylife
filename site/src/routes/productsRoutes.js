@@ -25,15 +25,16 @@ const validateProduct = [
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsControllers');
+const userRoute = require('../middlewares/userRoute');
 
 // ************ Rutas ************
 
-router.get('/productAdd', productsController.productAdd);// vista del form
+router.get('/productAdd',userRoute,productsController.productAdd);// vista del form
 router.post('/productAdd',upload.single('src'),validateProduct, productsController.store);// guarda producto
 
 router.get('/', productsController.index);//productos todos sql
 router.get('/success', productsController.success);// guarda producto
-router.get('/:id/edit',upload.single('src'),validateProduct, productsController.edit);// formulario editar
+router.get('/:id/edit',upload.single('src'),userRoute, validateProduct, productsController.edit);// formulario editar
 router.put('/:id', upload.single('src'), validateProduct, productsController.update);// actualizacion
 router.get('/productCart', productsController.productCart);//carrito de compras
 router.get('/api', productsController.productsjson);//productos todos solo el json
